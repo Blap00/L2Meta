@@ -1,0 +1,241 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta TAGS-->
+    <meta charset="utf-8" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="keywords"
+        content="l2 esports, l2 sudamerica, l2 gamers, interlude, l2, lineage, lineage2, lineage 2, lineage dois, lineage ii, server nuevo, el mejor servidor de lineage 2, mejor servidor, servidor nuevo, novo servidor, o melhor servidor de lineage 2, o melhor servidor" />
+    <meta name="description"
+        content="L2 ESports, Lineage 2 ESports - Interlude x10 - Sudamerica - Autofarm - Unete al mejor server Lineage 2 Interlude de Sudamerica! Juega gratis" />
+    <meta name="language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:image" content="https://l2esports.pro/assets/images/og-image.jpg?v=20230819">
+
+    <!--Title-->
+    <title>L2 Interlude ESports x10 - Lineage 2 Interlude - Lineage II - Lineage 2 Interlude - L2 Interlude x10 -
+        Autofarm - L2ESports</title>
+
+    <link rel="shortcut icon" type="image/jpg" href="{% static 'img/favico.png' %}" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link href="{%static 'css/swiper-bundle.min.css'%}" rel="stylesheet">
+    <link href="{% static 'css/slick.css'%}" rel="stylesheet">
+    <link href="{% static 'css/style.css@v=20240517v3.css'%}" rel="stylesheet">
+    <link href="{% static 'css/mobile-style.css@v=20240517.css'%}" rel="stylesheet">
+    <link href="{% static 'css/ownStyle.css' %}" rel="stylesheet">
+    <style>
+        /* CSS for the alert message */
+        .alert {
+            transition: opacity 0.5s ease-in-out;
+            /* Add a transition for opacity */
+        }
+
+        /* CSS to hide the alert message */
+        .alert-hidden {
+            opacity: 0;
+            /* Set opacity to 0 to hide the alert */
+            height: 0;
+            /* Optionally, you can set height to 0 to collapse the alert */
+            overflow: hidden;
+            /* Hide any content that might still be visible */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="topPanel">
+            <div class="btn btn-drop" data-class="topPanel-left">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="topPanel-wrapper flex-c">
+                <div class="topPanel-left flex-c">
+                    <a href="dashboard.html" class="logo-mini bright"><img src="{% static 'img/logo-mini.png'%}"
+                            alt="Logo"></a>
+                    <ul class="nav">
+                        <li><a href="dashboard.html">Home</a></li>
+                        <li><a href="downloads.html">Downloads</a></li>
+                        <li><a href="dashboard.html">Store</a></li>
+                        <li><a href="discord.html">Discord</a></li>
+                        <li class="sub-menu"><a href="javascript:void(0)">Language</a>
+                            <ul>
+                                <li><a href="https://l2esports.pro/change-language/es">Español</a></li>
+                                <li><a href="https://l2esports.pro/change-language/en">English</a></li>
+                                <li><a href="https://l2esports.pro/change-language/pt">Português</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="topPanel-right">
+                    <a href="dashboard.html#register" class="sign-in open_modal">
+                        Log in
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="hand-animation">
+            <div class="light-hand"></div>
+            <div class="rune-hand"></div>
+        </div>
+        <div class="sparks">
+            <div class="spark_1"></div>
+            <div class="spark_2"></div>
+            <div class="spark_3"></div>
+            <div class="spark_4 spark-big"></div>
+        </div>
+        <div class="logo">
+            <a href="dashboard.html" class="bright"><img src="{% static 'img/logo.png'%}" alt="Logo"></a>
+        </div>
+        <div class="online flex-c-c">
+            <div class="light-animation">
+                <div class="blue-light"></div>
+                <div class="yellow-light"></div>
+            </div>
+            <div class="onlineBlock">
+                Online
+            </div>
+            <div class="onlineReg flex-c-c">
+                <div class="onlineReg-block" style="width:300px;font-size: 19px;width: 300px">
+                    <span id="goCountdown"></span>
+                    Grand Opening
+                </div>
+            </div>
+        </div>
+        <div class="download top" style="
+right: 200px;">
+            <a href="discord.html" class="download-button bright"
+                style="background: url('/static/img/discord.png') no-repeat;font-size:16px;">Join our
+                <span>Discord</span></a>
+        </div>
+        <div class="download" style="right:-200px;">
+            <a href="downloads.html" class="download-button bright">Download <span>Client</span></a>
+        </div>
+    </header>
+    <div class="container-fluid">
+        <!-- Display Messages -->
+        {% for message in messages %}
+        {% if message.tags == 'success' %}
+        <div class="alert alert-success">
+            {{ message|safe }}
+        </div>
+        {% elif message.tags == 'info' %}
+        <div class="alert alert-info">
+            {{ message|safe }}
+        </div>
+        {% elif message.tags == 'error' %}
+        <div class="alert alert-danger">
+            {{ message|safe }}
+        </div>
+        {% else %}
+        <div class="alert alert-danger">
+            {{ message|safe }}
+        </div>
+        {% endif %}
+        {% endfor %}
+
+        <!--Container where all the site goes-->
+        {% block content %}
+        {% endblock %}
+
+        <!--always there: -->
+        <a target="_blank" rel="noreferrer" href="https://vgw.hopzone.net/site/vote/105292/1"><img
+            src="{% static 'img/hopzone.gif' %}" alt="Vote our sever on HopZone.Net - top l2 servers"
+            style="border:0; position: fixed; z-index:99999; bottom: 0%; right: 0; width:140px; height: 120px;"></a>
+
+        <a class="vote-link" id="top-l2jbrasil-left" target="_blank" rel="noreferrer"
+            href="https://top.l2jbrasil.com/index.php?a=in&amp;u=L2ESports" target="_blank" rel="noreferrer"
+            style="position: fixed;bottom: 0;left: 0;z-index: 9999;width: 235px;"><img
+                src="https://top.l2jbrasil.com/button_l.php?u=L2ESports&amp;m=left"
+                alt="Top L2JBrasil  de Servidores de   Lineage2 " border="0" style="max-width:70%" /></a>
+    </div>
+
+    <!-- Script tags -->
+    <script src="https://l2esports.pro/assets/js/jquery-3.5.1.min.js"></script>
+    <script src="{% static 'js/swiper-bundle.min.js' %}"></script>
+    <script src="{% static 'js/slick.min.js' %}"></script>
+    <script src="{% static 'js/global.js' %}"></script>
+
+    <!--[if lt IE 9]>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script><![endif]-->
+    <script>
+        const toolbar = document.querySelector('.toolbar');
+        const newsCards = document.querySelectorAll('.news-card');
+        const toolbarLinks = toolbar.querySelectorAll('a');
+        for (let i = 0; i < toolbarLinks.length; i++) {
+            const link = toolbarLinks[i];
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
+
+                const filter = event.target.getAttribute('data-filter');
+                console.log("Pressed " + filter);
+
+                if (filter === 'all') {
+                    for (let i = 0; i < newsCards.length; i++) {
+                        newsCards[i].classList.remove('hidden');
+                    }
+                } else {
+                    for (let i = 0; i < newsCards.length; i++) {
+                        const tag = newsCards[i].querySelector('.tag.' + filter);
+                        if (tag) {
+                            newsCards[i].classList.remove('hidden');
+                        } else {
+                            newsCards[i].classList.add('hidden');
+                        }
+                    }
+                }
+
+                const activeButton = toolbar.querySelector('.active');
+                activeButton.classList.remove('active');
+                event.target.classList.add('active');
+            });
+        }
+        toolbarLinks[3].click();
+    </script>
+
+<script>
+    // Set the date we're counting down to
+    var dateTime = new Date('2024-03-01T20:00:00-03:00'); // Año-Mes-DíaT_Hora:Minuto:Segundo-ZonaHoraria
+
+
+    var countDownDate = dateTime.getTime();
+
+    // Update the count down every 1 second
+    var x = setInterval(function () {
+
+        // Get today's date and time
+        var now = new Date().getTime();
+
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
+
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Display the result in the element with id="demo"
+        document.getElementById("goCountdown").innerHTML = days + "d " + hours + "h "
+            + minutes + "m " + seconds + "s ";
+
+        // If the count down is finished, write some text
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("goCountdown").innerHTML = "ONLINE";
+        }
+    }, 1000);
+</script>
+<script>(function () { function c() { var b = a.contentDocument || a.contentWindow.document; if (b) { var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'8a0a62409cb3c844',t:'MTcyMDU0OTgxMS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d) } } if (document.body) { var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else { var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();</script>
+</body>
+
+</html>
