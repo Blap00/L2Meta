@@ -572,7 +572,7 @@ right: 200px;">
                 {% for news in recent_news_list %}
                     <div class="forumBlock">
                         <div class="forumBlock-ava">
-                            <img src="{% if news.images.first %}{{ news.images.first.image.url }}{% else %}path/to/default/image.jpg{% endif %}" alt="{{ news.title }}" height="298" width="691">
+                            <img src="{% if news.images.first %}{{ news.images.first.image.url }}{% else %}{% static 'img/default-image.jpg' %}{% endif %}" alt="{{ news.title }}" height="298" width="691">
                         </div>
                         <div class="forumBlock-text">
                             <a href="{% url 'news_detail' news.pk %}" class="forumBlock-text_link">{{ news.title }}</a>
