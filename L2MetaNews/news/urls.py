@@ -5,6 +5,6 @@ urlpatterns = [
     path('', views.index, name="index"),
     path('Download', views.download, name="downloads"),
     path('Discord', views.discord, name="discord"),
-    path('Log-in', views.download, name="login"),
+    path('Log-in', views.login, name="login"),
     
 ]

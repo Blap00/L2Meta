@@ -79,7 +79,7 @@
                     </ul>
                 </div>
                 <div class="topPanel-right">
-                    <a href="{% url 'login' %}" class="sign-in open_modal">
+                    <a href="{% url 'login' %}" class="sign-in">
                         Log in
                     </a>
                 </div>
@@ -96,7 +96,7 @@
             <div class="spark_4 spark-big"></div>
         </div>
         <div class="logo">
-            <a href="dashboard.html" class="bright"><img src="{% static 'img/logo.png'%}" alt="Logo"></a>
+            <a href="{% url 'index' %}" class="bright"><img src="{% static 'img/logo.png'%}" alt="Logo"></a>
         </div>
         {% block special_header %}
         {% endblock %}

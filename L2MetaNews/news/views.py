@@ -12,3 +12,6 @@ def download(request):
 
 def discord(request):
     return redirect("https://discord.com/invite/jUkzwFNxDd")
+
+def login(request):
+    return redirect("https://l2meta.cl/")
