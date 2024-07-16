@@ -4,6 +4,8 @@ import os
 
 # Create your models here.
 
+
+#Testing
 def news_image_upload_path(instance, filename):
     # Construye la ruta de carga basada en el título de la noticia y el nombre del archivo
     return os.path.join('uploads/news', instance.news.title, filename)
