@@ -67,8 +67,8 @@
                     <ul class="nav">
                         <li><a href="{% url 'index' %}">Home</a></li>
                         <li><a href="{% url 'downloads' %}">Downloads</a></li>
-                        <li><a href="dashboard.html">Store</a></li>
-                        <li><a href="discord.html">Discord</a></li>
+                        <li><a href="{% url 'index' %}">Store</a></li>
+                        <li><a href="{% url 'discord' %}">Discord</a></li>
                         <li class="sub-menu"><a href="javascript:void(0)">Language</a>
                             <ul>
                                 <li><a href="https://l2esports.pro/change-language/es">Español</a></li>
@@ -79,7 +79,7 @@
                     </ul>
                 </div>
                 <div class="topPanel-right">
-                    <a href="dashboard.html#register" class="sign-in open_modal">
+                    <a href="{% url 'login' %}" class="sign-in open_modal">
                         Log in
                     </a>
                 </div>
