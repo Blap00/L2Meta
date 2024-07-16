@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-^a!k-a7d1k!g(fd!nwy9$*u+#e!g!++*(yg0nto_g%fo#^s^&0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['wpl2metatesting.pythonanywhere.com']
 
 
 # Application definition
@@ -116,8 +116,8 @@ import os
 # Configuración de archivos estáticos (CSS, JavaScript, imágenes estáticas, etc.)
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
+STATIC_ROOT = "/home/wpl2metaTesting/L2Meta/L2MetaNews/news/static"
 # Configuración de archivos de medios (imágenes subidas por el usuario, etc.)
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
