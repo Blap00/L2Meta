@@ -1,8 +1,38 @@
-<!-- default.html -->
+<!-- index.html -->
 {% extends "base.html" %}
-{% block title %}Horario Sala{% endblock %}
-{% block content %}
 {% load static %}
+
+
+{% block special_header %}
+<div class="online flex-c-c">
+    <div class="light-animation">
+        <div class="blue-light"></div>
+        <div class="yellow-light"></div>
+    </div>
+    <div class="onlineBlock">
+        Online
+    </div>
+    <div class="onlineReg flex-c-c">
+        <div class="onlineReg-block" style="width:300px;font-size: 19px;width: 300px">
+            <span id="goCountdown"></span>
+            Grand Opening
+        </div>
+    </div>
+</div>
+<div class="download top" style="
+right: 200px;">
+    <a href="discord.html" class="download-button bright"
+        style="background: url('/static/img/discord.png') no-repeat;font-size:16px;">Join our
+        <span>Discord</span></a>
+</div>
+<div class="download" style="right:-200px;">
+    <a href="downloads.html" class="download-button bright">Download <span>Client</span></a>
+</div>
+{% endblock %}
+{% block content %}
+
+
+<link href="{% static 'css/style.css'%}" rel="stylesheet">
 <!-- There goes any news that I decide in -->
 <main class="page news">
     <div id="newslist" class="bottom-wrapper">

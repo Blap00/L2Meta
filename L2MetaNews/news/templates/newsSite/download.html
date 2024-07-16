@@ -1,0 +1,783 @@
+<!-- index.html -->
+{% extends "base.html" %}
+{% load static %}
+{% block special_head %}
+<script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '786732722390405');
+    fbq('track', 'PageView');
+</script>
+ <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=786732722390405&ev=PageView&noscript=1"
+/></noscript>
+  
+  
+  
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-PQS23PD5');</script>
+  
+  
+  <meta name="facebook-domain-verification" content="97zbl1f1jzqsix46rx8ch1626ucudi" />
+{% endblock %}
+
+{% block special_header %}
+<div class="online flex-c-c">
+    <div class="light-animation">
+        <div class="blue-light"></div>
+        <div class="yellow-light"></div>
+    </div>
+    <div class="onlineBlock">
+        Online
+    </div>
+    <div class="onlineReg flex-c-c">
+        <div class="onlineReg-block" style="width:300px;font-size: 19px;width: 300px">
+            <span id="goCountdown"></span>
+            Grand Opening
+        </div>
+    </div>
+</div>
+<div class="download top" style="
+right: 200px;">
+    <a href="discord.html" class="download-button bright"
+        style="background: url('/static/img/discord.png') no-repeat;font-size:16px;">Join our
+        <span>Discord</span></a>
+</div>
+<div class="download" style="right:-200px;">
+    <a href="downloads.html" class="download-button bright">Download <span>Client</span></a>
+</div>
+
+
+{% endblock %}
+{% block content %}
+     
+<main class="main">
+    <aside>
+    <div class="rankings blockHome">
+    <div class="h2-title h2-title-table flex-s-c">
+    <span>Rankings</span>
+    <div class="tabTable">
+    <a class="tabTable-button active" data-tab="players">PvP</a> <a class="tabTable-button" data-tab="pk">PK</a><a class="tabTable-button" data-tab="clan">Clan PvP</a>
+    </div>
+    </div>
+    <div class="table tabTable-block active" id="players">
+    <div class="tableBlock">
+    <div class="tableBlock-title">
+    <div class="tableBlock-title_player">Player</div>
+    <div class="tableBlock-title_level">Level</div>
+    <div class="tableBlock-title_score">PvPs</div>
+    </div>
+    <div class="tableBlock-content">
+    <div class="tableBlock-conten_number">1</div>
+    <div class="tableBlock-conten_name"><img src="assets/images/dwarf-female.png" alt> <a "https://l2esports.pro/href">Toxico
+    <div class="tablePopup">
+    <span class="tablePopup-title">Toxico</span>
+    <div class="tablePopup-ava"><img src="assets/images/dwarf-female-big.png" alt></div>
+    <div class="tablePopup-block">
+    <span>Class:</span> <span>Grand Khavatari</span>
+    </div>
+    <div class="tablePopup-block">
+    <span>Clan:</span> <span>CrimenOrganizado</span>
+    </div>
+    <div class="tablePopup-block">
+    <span>Level:</span> <span>80</span>
+    </div>
+    <div class="tablePopup-block">
+    <span>Created time:</span> <span>09/07/2024</span>
+    </div>
+    </div>
+    </a></div>
+    <div class="tableBlock-conten_lvl"><span class="color-purple">80</span></div>
+    <div class="tableBlock-conten_scr">2086</div>
+    </div>
+    <div class="tableBlock-content">
+    <div class="tableBlock-conten_number">2</div>
+    <div class="tableBlock-conten_name"><img src="assets/images/dwarf-male.png" alt> <a "https://l2esports.pro/href">Pachuno
+    <div class="tablePopup">
+    <span class="tablePopup-title">Pachuno</span>
+    <div class="tablePopup-ava"><img src="assets/images/dwarf-male-big.png" alt></div>
+    <div class="tablePopup-block">
+    <span>Class:</span> <span>Adventurer</span>
+    </div>
+    <div class="tablePopup-block">
+    <span>Clan:</span> <span>OGs</span>
+    </div>
+    <div class="tablePopup-block">
+    <span>Level:</span> <span>80</span>
+    </div>
+    <div class="tablePopup-block">
+    <span>Created time:</span> <span>09/07/2024</span>
+    </div>
+    </div>
+    </a></div>
+    <div class="tableBlock-conten_lvl"><span class="color-purple">80</span></div>
+    <div class="tableBlock-conten_scr">1513</div>
+    </div>
+    <div class="tableBlock-content">
+    <div class="tableBlock-conten_number">3</div>
+    <div class="tableBlock-conten_name"><img src="assets/images/dwarf-female.png" alt> <a "https://l2esports.pro/href">button
+    <div class="tablePopup">
+    <span class="tablePopup-title">button</span>
+    <div class="tablePopup-ava"><img src="assets/images/dwarf-female-big.png" alt></div>
+    <div class="tablePopup-block">
+    <span>Class:</span> <span>Wind Rider</span>
+    </div>
+    <div class="tablePopup-block">
+    <span>Clan:</span> <span>botones</span>
+    </div>
+    <div class="tablePopup-block">
+    <span>Level:</span> <span>80</span>
+    </div>
+    <div class="tablePopup-block">
+    <span>Created time:</span> <span>09/07/2024</span>
+    </div>
+    </div>
+    </a></div>
+    <div class="tableBlock-conten_lvl"><span class="color-purple">80</span></div>
+    <div class="tableBlock-conten_scr">1473</div>
+    </div>
+    <div class="tableBlock-content">
+    <div class="tableBlock-conten_number">4</div>
+    <div class="tableBlock-conten_name"><img src="assets/images/dwarf-male.png" alt> <a "https://l2esports.pro/href">Legend
+    <div class="tablePopup">
+    <span class="tablePopup-title">Legend</span>
+    <div class="tablePopup-ava"><img src="assets/images/dwarf-male-big.png" alt></div>
+    <div class="tablePopup-block">
+    <span>Class:</span> <span>Maestro</span>
+    </div>
+    <div class="tablePopup-block">
+    <span>Clan:</span> <span>CrimenOrganizado</span>
+    </div>
+    <div class="tablePopup-block">
+    <span>Level:</span> <span>78</span>
+    </div>
+    <div class="tablePopup-block">
+    <span>Created time:</span> <span>09/07/2024</span>
+    </div>
+    </div>
+    </a></div>
+    <div class="tableBlock-conten_lvl"><span class="color-purple">78</span></div>
+    <div class="tableBlock-conten_scr">1267</div>
+    </div>
+    <div class="tableBlock-content">
+    <div class="tableBlock-conten_number">5</div>
+    <div class="tableBlock-conten_name"><img src="assets/images/mystic-male.png" alt> <a "https://l2esports.pro/href">blacksheepp
+    <div class="tablePopup">
+    <span class="tablePopup-title">blacksheepp</span>
+    <div class="tablePopup-ava"><img src="assets/images/mystic-male-big.png" alt></div>
+    <div class="tablePopup-block">
+    <span>Class:</span> <span>Sword Muse</span>
+    </div>
+    <div class="tablePopup-block">
+    <span>Clan:</span> <span>AmigosDeMessi</span>
+    </div>
+    <div class="tablePopup-block">
+    <span>Level:</span> <span>80</span>
+    </div>
+    <div class="tablePopup-block">
+    <span>Created time:</span> <span>09/07/2024</span>
+    </div>
+    </div>
+    </a></div>
+    <div class="tableBlock-conten_lvl"><span class="color-purple">80</span></div>
+    <div class="tableBlock-conten_scr">1234</div>
+    </div>
+    <div class="tableBlock-content">
+    <div class="tableBlock-conten_number">6</div>
+    <div class="tableBlock-conten_name"><img src="assets/images/dwarf-male.png" alt> <a "https://l2esports.pro/href">Zirss
+    <div class="tablePopup">
+    <span class="tablePopup-title">Zirss</span>
+    <div class="tablePopup-ava"><img src="assets/images/dwarf-male-big.png" alt></div>
+    <div class="tablePopup-block">
+    <span>Class:</span> <span>Elemental Master</span>
+    </div>
+    <div class="tablePopup-block">
+    <span>Clan:</span> <span>AmigosDeMessi</span>
+    </div>
+    <div class="tablePopup-block">
+    <span>Level:</span> <span>80</span>
+    </div>
+    <div class="tablePopup-block">
+    <span>Created time:</span> <span>09/07/2024</span>
+    </div>
+    </div>
+    </a></div>
+    <div class="tableBlock-conten_lvl"><span class="color-purple">80</span></div>
+    <div class="tableBlock-conten_scr">1213</div>
+    </div>
+    <div class="tableBlock-content">
+    <div class="tableBlock-conten_number">7</div>
+    <div class="tableBlock-conten_name"><img src="assets/images/dwarf-female.png" alt> <a "https://l2esports.pro/href">PayeGuazu
+    <div class="tablePopup">
+    <span class="tablePopup-title">PayeGuazu</span>
+    <div class="tablePopup-ava"><img src="assets/images/dwarf-female-big.png" alt></div>
+    <div class="tablePopup-block">
+    <span>Class:</span> <span>Titan</span>
+    </div>
+    <div class="tablePopup-block">
+    <span>Clan:</span> <span>AmigosDeMessi</span>
+    </div>
+    <div class="tablePopup-block">
+    <span>Level:</span> <span>80</span>
+    </div>
+    <div class="tablePopup-block">
+    <span>Created time:</span> <span>09/07/2024</span>
+    </div>
+    </div>
+    </a></div>
+    <div class="tableBlock-conten_lvl"><span class="color-purple">80</span></div>
+    <div class="tableBlock-conten_scr">1122</div>
+    </div>
+    <div class="tableBlock-content">
+    <div class="tableBlock-conten_number">8</div>
+    <div class="tableBlock-conten_name"><img src="assets/images/mystic-male.png" alt> <a "https://l2esports.pro/href">Blue
+    <div class="tablePopup">
+    <span class="tablePopup-title">Blue</span>
+    <div class="tablePopup-ava"><img src="assets/images/mystic-male-big.png" alt></div>
+    <div class="tablePopup-block">
+    <span>Class:</span> <span>Elemental Master</span>
+    </div>
+    <div class="tablePopup-block">
+    <span>Clan:</span> <span>ColorsInk</span>
+    </div>
+    <div class="tablePopup-block">
+    <span>Level:</span> <span>79</span>
+    </div>
+    <div class="tablePopup-block">
+    <span>Created time:</span> <span>09/07/2024</span>
+    </div>
+    </div>
+    </a></div>
+    <div class="tableBlock-conten_lvl"><span class="color-purple">79</span></div>
+    <div class="tableBlock-conten_scr">1112</div>
+    </div>
+    <div class="tableBlock-content">
+    <div class="tableBlock-conten_number">9</div>
+    <div class="tableBlock-conten_name"><img src="assets/images/dwarf-male.png" alt> <a "https://l2esports.pro/href">Berlin
+    <div class="tablePopup">
+    <span class="tablePopup-title">Berlin</span>
+    <div class="tablePopup-ava"><img src="assets/images/dwarf-male-big.png" alt></div>
+    <div class="tablePopup-block">
+    <span>Class:</span> <span>Phoenix Knight</span>
+    </div>
+    <div class="tablePopup-block">
+    <span>Clan:</span> <span>AmigosDeMessi</span>
+    </div>
+    <div class="tablePopup-block">
+    <span>Level:</span> <span>80</span>
+    </div>
+    <div class="tablePopup-block">
+    <span>Created time:</span> <span>09/07/2024</span>
+    </div>
+    </div>
+    </a></div>
+    <div class="tableBlock-conten_lvl"><span class="color-purple">80</span></div>
+    <div class="tableBlock-conten_scr">1004</div>
+    </div>
+    <div class="tableBlock-content">
+    <div class="tableBlock-conten_number">10</div>
+    <div class="tableBlock-conten_name"><img src="assets/images/dwarf-male.png" alt> <a "https://l2esports.pro/href">Luffy
+    <div class="tablePopup">
+    <span class="tablePopup-title">Luffy</span>
+    <div class="tablePopup-ava"><img src="assets/images/dwarf-male-big.png" alt></div>
+    <div class="tablePopup-block">
+    <span>Class:</span> <span>Mystic Muse</span>
+    </div>
+    <div class="tablePopup-block">
+    <span>Clan:</span> <span>botones</span>
+    </div>
+    <div class="tablePopup-block">
+    <span>Level:</span> <span>80</span>
+    </div>
+    <div class="tablePopup-block">
+    <span>Created time:</span> <span>09/07/2024</span>
+    </div>
+    </div>
+    </a></div>
+    <div class="tableBlock-conten_lvl"><span class="color-purple">80</span></div>
+    <div class="tableBlock-conten_scr">984</div>
+    </div>
+    </div>
+    <div class="all-button">
+    <a href="rankings.html" class="button">View All</a>
+    </div>
+    </div>
+    <div class="table tabTable-block" id="pk">
+    <div class="tableBlock">
+    <div class="tableBlock-title">
+    <div class="tableBlock-title_player">Player</div>
+    <div class="tableBlock-title_level">Level</div>
+    <div class="tableBlock-title_score">PKs</div>
+    </div>
+    <div class="tableBlock-content">
+    <div class="tableBlock-conten_number">1</div>
+    <div class="tableBlock-conten_name"><img src="assets/images/dwarf-female.png" alt> <a "https://l2esports.pro/href">TerraWilson
+    <div class="tablePopup">
+    <span class="tablePopup-title">TerraWilson</span>
+    <div class="tablePopup-ava"><img src="assets/images/dwarf-female-big.png" alt></div>
+    <div class="tablePopup-block">
+    <span>Class:</span> <span>Storm Screamer</span>
+    </div>
+    <div class="tablePopup-block">
+    <span>Clan:</span> <span>No clan</span>
+    </div>
+    <div class="tablePopup-block">
+    <span>Level:</span> <span>80</span>
+    </div>
+    <div class="tablePopup-block">
+    <span>Created time:</span> <span>09/07/2024</span>
+    </div>
+    </div>
+    </a></div>
+    <div class="tableBlock-conten_lvl"><span class="color-purple">80</span></div>
+    <div class="tableBlock-conten_scr">451</div>
+    </div>
+    <div class="tableBlock-content">
+    <div class="tableBlock-conten_number">2</div>
+    <div class="tableBlock-conten_name"><img src="assets/images/orc-male.png" alt> <a "https://l2esports.pro/href">Benjiprice
+    <div class="tablePopup">
+    <span class="tablePopup-title">Benjiprice</span>
+    <div class="tablePopup-ava"><img src="assets/images/orc-male-big.png" alt></div>
+    <div class="tablePopup-block">
+    <span>Class:</span> <span>Soultaker</span>
+    </div>
+    <div class="tablePopup-block">
+    <span>Clan:</span> <span>BROTHERS</span>
+    </div>
+    <div class="tablePopup-block">
+    <span>Level:</span> <span>80</span>
+    </div>
+    <div class="tablePopup-block">
+    <span>Created time:</span> <span>09/07/2024</span>
+    </div>
+    </div>
+    </a></div>
+    <div class="tableBlock-conten_lvl"><span class="color-purple">80</span></div>
+    <div class="tableBlock-conten_scr">272</div>
+    </div>
+    <div class="tableBlock-content">
+    <div class="tableBlock-conten_number">3</div>
+    <div class="tableBlock-conten_name"><img src="assets/images/dwarf-female.png" alt> <a "https://l2esports.pro/href">Toxico
+    <div class="tablePopup">
+    <span class="tablePopup-title">Toxico</span>
+    <div class="tablePopup-ava"><img src="assets/images/dwarf-female-big.png" alt></div>
+    <div class="tablePopup-block">
+    <span>Class:</span> <span>Grand Khavatari</span>
+    </div>
+    <div class="tablePopup-block">
+    <span>Clan:</span> <span>CrimenOrganizado</span>
+    </div>
+    <div class="tablePopup-block">
+    <span>Level:</span> <span>80</span>
+    </div>
+    <div class="tablePopup-block">
+    <span>Created time:</span> <span>09/07/2024</span>
+    </div>
+    </div>
+    </a></div>
+    <div class="tableBlock-conten_lvl"><span class="color-purple">80</span></div>
+    <div class="tableBlock-conten_scr">195</div>
+    </div>
+    <div class="tableBlock-content">
+    <div class="tableBlock-conten_number">4</div>
+    <div class="tableBlock-conten_name"><img src="assets/images/dwarf-male.png" alt> <a "https://l2esports.pro/href">Kewk
+    <div class="tablePopup">
+    <span class="tablePopup-title">Kewk</span>
+    <div class="tablePopup-ava"><img src="assets/images/dwarf-male-big.png" alt></div>
+    <div class="tablePopup-block">
+    <span>Class:</span> <span>Saggitarius</span>
+    </div>
+    <div class="tablePopup-block">
+    <span>Clan:</span> <span>Peligroxoss</span>
+    </div>
+    <div class="tablePopup-block">
+    <span>Level:</span> <span>79</span>
+    </div>
+    <div class="tablePopup-block">
+    <span>Created time:</span> <span>09/07/2024</span>
+    </div>
+    </div>
+    </a></div>
+    <div class="tableBlock-conten_lvl"><span class="color-purple">79</span></div>
+    <div class="tableBlock-conten_scr">174</div>
+    </div>
+    <div class="tableBlock-content">
+    <div class="tableBlock-conten_number">5</div>
+    <div class="tableBlock-conten_name"><img src="assets/images/darkelf-female.png" alt> <a "https://l2esports.pro/href">Peligroxa
+    <div class="tablePopup">
+    <span class="tablePopup-title">Peligroxa</span>
+    <div class="tablePopup-ava"><img src="assets/images/darkelf-female-big.png" alt></div>
+    <div class="tablePopup-block">
+    <span>Class:</span> <span>Spellhowler</span>
+    </div>
+    <div class="tablePopup-block">
+    <span>Clan:</span> <span>Peligroxoss</span>
+    </div>
+    <div class="tablePopup-block">
+    <span>Level:</span> <span>75</span>
+    </div>
+    <div class="tablePopup-block">
+    <span>Created time:</span> <span>09/07/2024</span>
+    </div>
+    </div>
+    </a></div>
+    <div class="tableBlock-conten_lvl"><span class="color-purple">75</span></div>
+    <div class="tableBlock-conten_scr">157</div>
+    </div>
+    <div class="tableBlock-content">
+    <div class="tableBlock-conten_number">6</div>
+    <div class="tableBlock-conten_name"><img src="assets/images/mystic-male.png" alt> <a "https://l2esports.pro/href">Purple
+    <div class="tablePopup">
+    <span class="tablePopup-title">Purple</span>
+    <div class="tablePopup-ava"><img src="assets/images/mystic-male-big.png" alt></div>
+    <div class="tablePopup-block">
+    <span>Class:</span> <span>Ghost Sentinel</span>
+    </div>
+    <div class="tablePopup-block">
+    <span>Clan:</span> <span>ColorsInk</span>
+    </div>
+    <div class="tablePopup-block">
+    <span>Level:</span> <span>80</span>
+    </div>
+    <div class="tablePopup-block">
+    <span>Created time:</span> <span>09/07/2024</span>
+    </div>
+    </div>
+    </a></div>
+    <div class="tableBlock-conten_lvl"><span class="color-purple">80</span></div>
+    <div class="tableBlock-conten_scr">157</div>
+    </div>
+    <div class="tableBlock-content">
+    <div class="tableBlock-conten_number">7</div>
+    <div class="tableBlock-conten_name"><img src="assets/images/dwarf-female.png" alt> <a "https://l2esports.pro/href">PayeGuazu
+    <div class="tablePopup">
+    <span class="tablePopup-title">PayeGuazu</span>
+    <div class="tablePopup-ava"><img src="assets/images/dwarf-female-big.png" alt></div>
+    <div class="tablePopup-block">
+    <span>Class:</span> <span>Titan</span>
+    </div>
+    <div class="tablePopup-block">
+    <span>Clan:</span> <span>AmigosDeMessi</span>
+    </div>
+    <div class="tablePopup-block">
+    <span>Level:</span> <span>80</span>
+    </div>
+    <div class="tablePopup-block">
+    <span>Created time:</span> <span>09/07/2024</span>
+    </div>
+    </div>
+    </a></div>
+    <div class="tableBlock-conten_lvl"><span class="color-purple">80</span></div>
+    <div class="tableBlock-conten_scr">154</div>
+    </div>
+    <div class="tableBlock-content">
+    <div class="tableBlock-conten_number">8</div>
+    <div class="tableBlock-conten_name"><img src="assets/images/dwarf-female.png" alt> <a "https://l2esports.pro/href">Lyanna
+    <div class="tablePopup">
+    <span class="tablePopup-title">Lyanna</span>
+    <div class="tablePopup-ava"><img src="assets/images/dwarf-female-big.png" alt></div>
+    <div class="tablePopup-block">
+    <span>Class:</span> <span>Soultaker</span>
+    </div>
+    <div class="tablePopup-block">
+    <span>Clan:</span> <span>botones</span>
+    </div>
+    <div class="tablePopup-block">
+    <span>Level:</span> <span>80</span>
+    </div>
+    <div class="tablePopup-block">
+    <span>Created time:</span> <span>09/07/2024</span>
+    </div>
+    </div>
+    </a></div>
+    <div class="tableBlock-conten_lvl"><span class="color-purple">80</span></div>
+    <div class="tableBlock-conten_scr">142</div>
+    </div>
+    <div class="tableBlock-content">
+    <div class="tableBlock-conten_number">9</div>
+    <div class="tableBlock-conten_name"><img src="assets/images/mystic-male.png" alt> <a "https://l2esports.pro/href">blacksheepp
+    <div class="tablePopup">
+    <span class="tablePopup-title">blacksheepp</span>
+    <div class="tablePopup-ava"><img src="assets/images/mystic-male-big.png" alt></div>
+    <div class="tablePopup-block">
+    <span>Class:</span> <span>Sword Muse</span>
+    </div>
+    <div class="tablePopup-block">
+    <span>Clan:</span> <span>AmigosDeMessi</span>
+    </div>
+    <div class="tablePopup-block">
+    <span>Level:</span> <span>80</span>
+    </div>
+    <div class="tablePopup-block">
+    <span>Created time:</span> <span>09/07/2024</span>
+    </div>
+    </div>
+    </a></div>
+    <div class="tableBlock-conten_lvl"><span class="color-purple">80</span></div>
+    <div class="tableBlock-conten_scr">139</div>
+    </div>
+    <div class="tableBlock-content">
+    <div class="tableBlock-conten_number">10</div>
+    <div class="tableBlock-conten_name"><img src="assets/images/darkelf-female.png" alt> <a "https://l2esports.pro/href">blupblup
+    <div class="tablePopup">
+    <span class="tablePopup-title">blupblup</span>
+    <div class="tablePopup-ava"><img src="assets/images/darkelf-female-big.png" alt></div>
+    <div class="tablePopup-block">
+    <span>Class:</span> <span>Phantom Summoner</span>
+    </div>
+    <div class="tablePopup-block">
+    <span>Clan:</span> <span>Peligroxoss</span>
+    </div>
+    <div class="tablePopup-block">
+    <span>Level:</span> <span>78</span>
+    </div>
+    <div class="tablePopup-block">
+    <span>Created time:</span> <span>09/07/2024</span>
+    </div>
+    </div>
+    </a></div>
+    <div class="tableBlock-conten_lvl"><span class="color-purple">78</span></div>
+    <div class="tableBlock-conten_scr">133</div>
+    </div>
+    </div>
+    <div class="all-button">
+    <a href="rankings.html" class="button">View All</a>
+    </div>
+    </div>
+    </div>
+    <div class="forumHome blockHome">
+    <div class="h2-title h2-title-table flex-s-c">
+    <span>News</span> <a href="https://l2esports.pro/news">View all</a>
+    </div>
+    <div class="forumBlock-content">
+    <div class="forumBlock">
+    <div class="forumBlock-ava">
+    <img src="assets/images/forum-ava_2.png" alt>
+    </div>
+    <div class="forumBlock-text">
+    <a href="news/index.html" class="forumBlock-text_link">Exclusive farm zone</a>
+    <div class="forumBlock-text_info">
+    <span class="forumBlock-text_info-nick">by <a "https://l2esports.pro/href" title="Fighter-Pro">Admin</a></span> |
+    <span class="forumBlock-text_info-date">17/05/2024 21:20</span>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="socHome">
+    <a href="https://www.youtube.com/channel/UCSx3Ugo-md4BF2M-b65s10g" target="_blank" rel="noreferrer" class="socButton socYoutube">
+    YouTube
+    <span>Canal Oficial</span>
+    </a>
+    <a href="discord.html" target="_blank" rel="noreferrer" class="socButton socDiscord">
+    Discord
+    <span>Comunidad</span>
+    </a>
+    <a href="https://facebook.com/L2ESports" target="_blank" rel="noreferrer" class="socButton socFacebook">
+    Facebook
+    <span>Página Oficial</span>
+    </a>
+    <div class="socBlock flex-c-c">
+    <a href="https://l2esports.pro/news" class="socBlock-guides socBlock-button">
+    Guias
+    <span>Centro de Información</span>
+    </a>
+    <a href="discord.html" target="_blank" rel="noreferrer" class="socBlock-forum socBlock-button">
+    Discord
+    <span>Comunidad</span>
+    </a>
+    </div>
+    </div>
+    </aside>
+    <div class="content">
+    <div class="h2-title h2-title-content flex-s-c">
+    <h1>Downloads</h1>
+    </div>
+    <div class="downloadBlock-content">
+    <div class="downloadBlock-title">
+    How to install
+    </div>
+    <div class="downloadBlock" style="padding-right:0px;padding-left:0px;">
+    <iframe style="max-width: 100%;width:100%;" width="560" height="315" src="https://www.youtube.com/embed/hjKRK6afx8k?si=uoSHB6UG9lkKlmZy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <div class="downloadBlock">
+    <div class="downloadBlock-title">
+    Full client: Size: <span>2.5Gb</span>
+    </div>
+    <div class="flex-c-c downloadBlock-buttons">
+    <a href="https://drive.google.com/file/d/1-rnT6KB6bw0cQ1bs9Ro83oRlAcj6wPZ8/view?usp=sharing" class="googleButton d-button" target="_blank" rel="noreferrer">Google Drive I</a>
+    <a href="https://drive.google.com/file/d/1IYKl4vIslz2GrOjgVF-Bl8uwh_aHLZuS/view?usp=sharing" class="googleButton d-button" target="_blank" rel="noreferrer">Google Drive II</a>
+    </div>
+    </div>
+    <div class="downloadBlock">
+    <div class="downloadBlock-title">
+    Download Launcher
+    </div>
+    <div class="downloadBlock-text">
+    If you already have the client, you can download our Launcher. Remember that you should paste it inside the main Lineage II folder (NOT inside system)
+    </div>
+    <div class="downloadBlock-button">
+    <a href="launcher/L2ESports.exe" target="_blank" rel="noreferrer" class="button">Download Launcher</a>
+    </div>
+    </div>
+    
+    </div>
+    <div class="mirror">
+    <span class="mirror-title">This section contains everything you need to play L2ESports.</span>
+    <div class="mirrorBlock">
+    <p>Clean Client 1 [Google Drive]: <span>Download - 2.5 GB</span></p>
+    <a href="https://drive.google.com/file/d/1-rnT6KB6bw0cQ1bs9Ro83oRlAcj6wPZ8/view?usp=sharing" target="_blank" rel="noreferrer" class="button">Download</a>
+    </div>
+    <div class="mirrorBlock">
+    <p>Clean Client Mirror 2 [Google Drive]: <span>Download - 2.5 GB</span></p>
+    <a href="https://drive.google.com/file/d/1IYKl4vIslz2GrOjgVF-Bl8uwh_aHLZuS/view?usp=sharing" target="_blank" rel="noreferrer" class="button">Download</a>
+    </div>
+    <div class="mirrorBlock">
+    <p>Clean Client Mirror 3 [Mega]: <span>Download - 2.5 GB</span></p>
+    <a href="https://mega.nz/file/fUNkXbCB#itVxYAcdQ6L4KAgsnQC6kleSwqkCFA0YVE65owk5w1s" target="_blank" rel="noreferrer" class="button">Download</a>
+    </div>
+    <div class="mirrorBlock">
+    <p>Patch (Without launcher) [Google Drive]: <span>Download - 2.0 GB</span></p>
+    <a href="https://drive.google.com/file/d/113hBRVl2Ecy92x9KC7NLW75G_zU3XjmK/view?usp=drive_link" target="_blank" rel="noreferrer" class="button">Download</a>
+    </div>
+    <div class="mirrorBlock">
+    <p>Patch (Without launcher) [Google Drive - Opción 2]: <span>Download - 2.0 GB</span></p>
+    <a href="https://drive.google.com/file/d/1GOc8XKPqlmkH1zH8rLBQkPCsABO91_Vb/view?usp=sharing" target="_blank" rel="noreferrer" class="button">Download</a>
+    </div>
+    <div class="mirrorBlock">
+    <p>Patch (Without launcher) [Mega]: <span>Download - 2.0 GB</span></p>
+    <a href="https://mega.nz/file/7EUzRCCY#lXXND2IO1y0_9c2Y0z9hZKyHUB1hML4r0mjCwpxMSi0" target="_blank" rel="noreferrer" class="button">Download</a>
+    </div>
+    <div class="mirrorBlock">
+    <p>Interface Silent [Optional]: <span>Download</span></p>
+    <a href="https://www.mediafire.com/file/u8hmj3fo329ohek/Silent_Dark_R2.7z/file" target="_blank" rel="noreferrer" class="button">Ir</a>
+    </div>
+    </div>
+    </div>
+    </main>
+    <div id="fb-root"></div>
+
+<div id="fb-customer-chat" class="fb-customerchat">
+</div>
+<script>
+            var chatbox = document.getElementById('fb-customer-chat');
+            chatbox.setAttribute("page_id", "100841992850797");
+            chatbox.setAttribute("attribution", "biz_inbox");
+        </script>
+
+<script>
+            window.fbAsyncInit = function() {
+                FB.init({
+                    xfbml            : true,
+                    version          : 'v18.0'
+                });
+            };
+
+            (function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = 'https://connect.facebook.net/es_LA/sdk/xfbml.customerchat.js';
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </script>
+</div>
+<a target="_blank" rel="noreferrer" href="https://vgw.hopzone.net/site/vote/105292/1"><img src="assets/images/hopzone.gif" alt="Vote our sever on HopZone.Net - top l2 servers" style="border:0; position: fixed; z-index:99999; bottom: 0%; right: 0; width:140px; height: 120px;"></a>
+
+<a class="vote-link" id="top-l2jbrasil-left" target="_blank" rel="noreferrer" href="https://top.l2jbrasil.com/index.php?a=in&amp;u=L2ESports" target="_blank" rel="noreferrer" style="position: fixed;bottom: 0;left: 0;z-index: 9999;width: 235px;"><img src="https://top.l2jbrasil.com/button_l.php?u=L2ESports&amp;m=left" alt="Top L2JBrasil  de Servidores de   Lineage2 " border="0" style="max-width:70%" /></a>
+
+<footer>
+<div class="wrapper">
+<div class="footerMenu flex">
+<div class="footerMenu-block">
+<div class="h2-title flex-s-c">
+<span>Information</span>
+</div>
+<ul class="f-menu">
+<li><a href="https://l2esports.pro/href">About the Game</a></li>
+<li><a href="https://l2esports.pro/href">Game Wiki</a></li>
+<li><a href="https://l2esports.pro/href">Terms of Services</a></li>
+<li><a href="https://l2esports.pro/href">Agreement</a></li>
+</ul>
+</div>
+<div class="footerMenu-block">
+<div class="h2-title flex-s-c">
+<span>How to Start</span>
+</div>
+<ul class="f-menu">
+<li><a href="dashboard.html">Registration</a></li>
+<li><a href="downloads.html">Downloads</a></li>
+<li><a href="dashboard.html">Personal Area</a></li>
+<li><a "https://l2esports.pro/href">FAQ</a></li>
+</ul>
+</div>
+<div class="footerMenu-block">
+<div class="h2-title flex-s-c">
+<span>Community</span>
+</div>
+<ul class="f-menu">
+<li><a href="https://l2esports.pro/news">Forum</a></li>
+<li><a href="rankings.html">Rankings</a></li>
+<li><a "https://l2esports.pro/href">Administration</a></li>
+</ul>
+</div>
+<div class="footerMenu-block">
+<div class="h2-title flex-s-c">
+<span>Support</span>
+</div>
+<div class="e-mail">
+<p>E-mail support:</p>
+<a href="downloads.html#">info at L2ESports pro</a>
+</div>
+<div class="f-soc-icons">
+<a href="downloads.html#" class="twitter"></a>
+<a href="downloads.html#" class="vk"></a>
+<a href="https://facebook.com/L2ESports" class="fb"></a>
+<a href="https://twitch.tv/L2ESports" class="twitch"></a>
+</div>
+</div>
+</div>
+<span class="line"></span>
+<div class="footerInfo">
+<div class="footerInfo-block flex-s">
+<div class="copy"><span>© 2024</span> <a "https://l2esports.pro/href">L2ESports.pro.</a> <span>All rights reserved</span></div>
+</div>
+<div class="f-text">
+L2 Interlude - Lineage 2 Interlude - L2ESports - x10 - Autofarm<br>
+This server is a test version of the Lineage II game. The server has limited functions and capabilities, and in fact is not intended to be played on it. For a full-fledged game in Lineage, you must use the www.lineage2.com service. The goal of our project is to increase the popularity of the Lineage II game. The rights to the game client, as well as to the Lineage trademark, belong to NCSoft (lineage2.com).
+</div>
+</div>
+</div>
+</footer>
+<div class="toTop">
+<span>Go to Top</span>
+</div>
+<div id="register" class="modal_div">
+<span class="modal_close"></span>
+<form>
+<div class="modalContent">
+<span class="modalTitle">Sign in</span>
+<div class="enterButtons">
+<a href="https://l2esports.pro/auth/discord" class="discord-button">Connect with Discord</a>
+<a href="https://l2esports.pro/auth/facebook" class="facebook-button">Connect with Facebook</a>
+<a href="https://l2esports.pro/auth/google" class="google-button">Connect with Google</a>
+</div>
+</div>
+</form>
+</div>
+<div id="overlay"></div>
+
+
+
+
+{% endblock %}
+  

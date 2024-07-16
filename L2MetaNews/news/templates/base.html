@@ -48,6 +48,8 @@
             /* Hide any content that might still be visible */
         }
     </style>
+    {% block special_head %}
+    {% endblock %}
 </head>
 
 <body>
@@ -60,11 +62,11 @@
             </div>
             <div class="topPanel-wrapper flex-c">
                 <div class="topPanel-left flex-c">
-                    <a href="dashboard.html" class="logo-mini bright"><img src="{% static 'img/logo-mini.png'%}"
+                    <a href="{% url 'index' %}" class="logo-mini bright"><img src="{% static 'img/logo-mini.png'%}"
                             alt="Logo"></a>
                     <ul class="nav">
-                        <li><a href="dashboard.html">Home</a></li>
-                        <li><a href="downloads.html">Downloads</a></li>
+                        <li><a href="{% url 'index' %}">Home</a></li>
+                        <li><a href="{% url 'downloads' %}">Downloads</a></li>
                         <li><a href="dashboard.html">Store</a></li>
                         <li><a href="discord.html">Discord</a></li>
                         <li class="sub-menu"><a href="javascript:void(0)">Language</a>
@@ -96,30 +98,8 @@
         <div class="logo">
             <a href="dashboard.html" class="bright"><img src="{% static 'img/logo.png'%}" alt="Logo"></a>
         </div>
-        <div class="online flex-c-c">
-            <div class="light-animation">
-                <div class="blue-light"></div>
-                <div class="yellow-light"></div>
-            </div>
-            <div class="onlineBlock">
-                Online
-            </div>
-            <div class="onlineReg flex-c-c">
-                <div class="onlineReg-block" style="width:300px;font-size: 19px;width: 300px">
-                    <span id="goCountdown"></span>
-                    Grand Opening
-                </div>
-            </div>
-        </div>
-        <div class="download top" style="
-right: 200px;">
-            <a href="discord.html" class="download-button bright"
-                style="background: url('/static/img/discord.png') no-repeat;font-size:16px;">Join our
-                <span>Discord</span></a>
-        </div>
-        <div class="download" style="right:-200px;">
-            <a href="downloads.html" class="download-button bright">Download <span>Client</span></a>
-        </div>
+        {% block special_header %}
+        {% endblock %}
     </header>
     <div class="container-fluid">
         <!-- Display Messages -->

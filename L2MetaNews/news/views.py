@@ -6,3 +6,6 @@ from django.http import HttpResponse
 def index(request ):
     context = {'hello': 'Hello world'}
     return render(request, 'newsSite/index.html', {'contexto':context})
+
+def download(request):
+    return render(request, 'newsSite/download.html')
