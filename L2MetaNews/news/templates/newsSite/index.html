@@ -12,7 +12,7 @@
     <div class="onlineBlock">
         Online
     </div>
-    
+
     <div class="download top" style="left: 25vw;">
         <a href="discord.html" class="download-button bright"
             style="background: url('/static/img/discord.png') no-repeat;font-size:16px;">Join our
@@ -48,64 +48,49 @@
             <a href="{% url 'index' %}" data-filter="quests">Quests</a>
         </div>
         {% for news in news_list %}
-            <a class="news-card index-{{ forloop.counter }} light" href="{% url 'news_detail' news.id news.category.id %}">
-                <div class="thumb tag-border-sales"
-                    style="background-image:url('{{ news.images.all.0.image.url }}')"></div>
-                <div class="content-wrapper">
-                    <div class="gameTags">
-                        <div class="tag features tag-bg-sales">{{ news.category.name }}</div>
-                    </div>
-                    <div class="caption">{{ news.fechaSubida|date:"d/m/Y" }}</div>
-                    <p class="description">{{ news.title }}</p>
+        <a class="news-card index-{{ forloop.counter }} light" href="{% url 'news_detail' news.id news.category.id %}">
+            <div class="thumb tag-border-sales" style="background-image:url('{{ news.images.all.0.image.url }}')"></div>
+            <div class="content-wrapper">
+                <div class="gameTags">
+                    <div class="tag features tag-bg-sales">{{ news.category.name }}</div>
                 </div>
-            </a>
+                <div class="caption">{{ news.fechaSubida|date:"d/m/Y" }}</div>
+                <p class="description">{{ news.title }}</p>
+            </div>
+        </a>
         {% endfor %}
 
-
-            <a class="news-card index-17 light" href="partyfarm.html">
-                <div class="thumb tag-border-sales"
-                    style="background-image:url('/static/storage/uploads/1682444782_fuvzMhXRPZ.jpg')"></div>
-                <div class="content-wrapper">
-                    <div class="gameTags">
-                        <div class="tag features tag-bg-sales">FEATURES</div>
-                    </div>
-                    <div class="caption">17/05/2024</div>
-                    <p class="description">Party Farm - User Guide</p>
-                </div>
-            </a>
-            </div>
-        </div>
     </div>
+
 </main>
 <div id="fb-root"></div>
 
-        <div id="fb-customer-chat" class="fb-customerchat">
-        </div>
-        <script>
-            var chatbox = document.getElementById('fb-customer-chat');
-            chatbox.setAttribute("page_id", "100841992850797");
-            chatbox.setAttribute("attribution", "biz_inbox");
-        </script>
+<div id="fb-customer-chat" class="fb-customerchat">
+</div>
+<script>
+    var chatbox = document.getElementById('fb-customer-chat');
+    chatbox.setAttribute("page_id", "100841992850797");
+    chatbox.setAttribute("attribution", "biz_inbox");
+</script>
 
-        <script>
-            window.fbAsyncInit = function () {
-                FB.init({
-                    xfbml: true,
-                    version: 'v18.0'
-                });
-            };
+<script>
+    window.fbAsyncInit = function () {
+        FB.init({
+            xfbml: true,
+            version: 'v18.0'
+        });
+    };
 
-            (function (d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id)) return;
-                js = d.createElement(s); js.id = id;
-                js.src = 'https://connect.facebook.net/es_LA/sdk/xfbml.customerchat.js';
-                fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));
-        </script>
-        
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/es_LA/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+
 
 
 
 {% endblock %}
-  

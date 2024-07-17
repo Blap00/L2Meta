@@ -13,554 +13,22 @@
     </div>
     
     <div class="download top" style="left: 25vw;">
-        <a href="discord.html" class="download-button bright"
+        <a href="{% url 'discord' %}" class="download-button bright"
             style="background: url('/static/img/discord.png') no-repeat;font-size:16px;">Join our
             <span>Discord</span></a>
     </div>
     <div class="download" style="left:56vw">
-        <a href="downloads.html" class="download-button bright">Download <span>Client</span></a>
+        <a href="{% url 'downloads' %}" class="download-button bright">Download <span>Client</span></a>
     </div>
 </div>
 {% endblock %}
 {% block content %}
 <main class="main">
     <aside>
-        <div class="rankings blockHome">
-            <div class="h2-title h2-title-table flex-s-c">
-                <span>Rankings</span>
-                <div class="tabTable">
-                    <a class="tabTable-button active" data-tab="players">PvP</a> <a class="tabTable-button"
-                        data-tab="pk">PK</a><a class="tabTable-button" data-tab="clan">Clan PvP</a>
-                </div>
-            </div>
-            <div class="table tabTable-block active" id="players">
-                <div class="tableBlock">
-                    <div class="tableBlock-title">
-                        <div class="tableBlock-title_player">Player</div>
-                        <div class="tableBlock-title_level">Level</div>
-                        <div class="tableBlock-title_score">PvPs</div>
-                    </div>
-                    <div class="tableBlock-content">
-                        <div class="tableBlock-conten_number">1</div>
-                        <div class="tableBlock-conten_name"><img src="assets/images/dwarf-female.png" alt>
-                            <a "https://l2esports.pro/href">Toxico
-                                <div class="tablePopup">
-                                    <span class="tablePopup-title">Toxico</span>
-                                    <div class="tablePopup-ava"><img src="assets/images/dwarf-female-big.png"
-                                            alt></div>
-                                    <div class="tablePopup-block">
-                                        <span>Class:</span> <span>Grand Khavatari</span>
-                                    </div>
-                                    <div class="tablePopup-block">
-                                        <span>Clan:</span> <span>CrimenOrganizado</span>
-                                    </div>
-                                    <div class="tablePopup-block">
-                                        <span>Level:</span> <span>80</span>
-                                    </div>
-                                    <div class="tablePopup-block">
-                                        <span>Created time:</span> <span>09/07/2024</span>
-                                    </div>
-                                </div>
-                            </a></div>
-                        <div class="tableBlock-conten_lvl"><span class="color-purple">80</span></div>
-                        <div class="tableBlock-conten_scr">2086</div>
-                    </div>
-                    <div class="tableBlock-content">
-                        <div class="tableBlock-conten_number">2</div>
-                        <div class="tableBlock-conten_name"><img src="assets/images/dwarf-male.png" alt>
-                            <a "https://l2esports.pro/href">Pachuno
-                                <div class="tablePopup">
-                                    <span class="tablePopup-title">Pachuno</span>
-                                    <div class="tablePopup-ava"><img src="assets/images/dwarf-male-big.png" alt>
-                                    </div>
-                                    <div class="tablePopup-block">
-                                        <span>Class:</span> <span>Adventurer</span>
-                                    </div>
-                                    <div class="tablePopup-block">
-                                        <span>Clan:</span> <span>OGs</span>
-                                    </div>
-                                    <div class="tablePopup-block">
-                                        <span>Level:</span> <span>80</span>
-                                    </div>
-                                    <div class="tablePopup-block">
-                                        <span>Created time:</span> <span>09/07/2024</span>
-                                    </div>
-                                </div>
-                            </a></div>
-                        <div class="tableBlock-conten_lvl"><span class="color-purple">80</span></div>
-                        <div class="tableBlock-conten_scr">1513</div>
-                    </div>
-                    <div class="tableBlock-content">
-                        <div class="tableBlock-conten_number">3</div>
-                        <div class="tableBlock-conten_name"><img src="assets/images/dwarf-female.png" alt>
-                            <a "https://l2esports.pro/href">button
-                                <div class="tablePopup">
-                                    <span class="tablePopup-title">button</span>
-                                    <div class="tablePopup-ava"><img src="assets/images/dwarf-female-big.png"
-                                            alt></div>
-                                    <div class="tablePopup-block">
-                                        <span>Class:</span> <span>Wind Rider</span>
-                                    </div>
-                                    <div class="tablePopup-block">
-                                        <span>Clan:</span> <span>botones</span>
-                                    </div>
-                                    <div class="tablePopup-block">
-                                        <span>Level:</span> <span>80</span>
-                                    </div>
-                                    <div class="tablePopup-block">
-                                        <span>Created time:</span> <span>09/07/2024</span>
-                                    </div>
-                                </div>
-                            </a></div>
-                        <div class="tableBlock-conten_lvl"><span class="color-purple">80</span></div>
-                        <div class="tableBlock-conten_scr">1473</div>
-                    </div>
-                    <div class="tableBlock-content">
-                        <div class="tableBlock-conten_number">4</div>
-                        <div class="tableBlock-conten_name"><img src="assets/images/dwarf-male.png" alt>
-                            <a "https://l2esports.pro/href">Legend
-                                <div class="tablePopup">
-                                    <span class="tablePopup-title">Legend</span>
-                                    <div class="tablePopup-ava"><img src="assets/images/dwarf-male-big.png" alt>
-                                    </div>
-                                    <div class="tablePopup-block">
-                                        <span>Class:</span> <span>Maestro</span>
-                                    </div>
-                                    <div class="tablePopup-block">
-                                        <span>Clan:</span> <span>CrimenOrganizado</span>
-                                    </div>
-                                    <div class="tablePopup-block">
-                                        <span>Level:</span> <span>78</span>
-                                    </div>
-                                    <div class="tablePopup-block">
-                                        <span>Created time:</span> <span>09/07/2024</span>
-                                    </div>
-                                </div>
-                            </a></div>
-                        <div class="tableBlock-conten_lvl"><span class="color-purple">78</span></div>
-                        <div class="tableBlock-conten_scr">1267</div>
-                    </div>
-                    <div class="tableBlock-content">
-                        <div class="tableBlock-conten_number">5</div>
-                        <div class="tableBlock-conten_name"><img src="assets/images/mystic-male.png" alt>
-                            <a "https://l2esports.pro/href">blacksheepp
-                                <div class="tablePopup">
-                                    <span class="tablePopup-title">blacksheepp</span>
-                                    <div class="tablePopup-ava"><img src="assets/images/mystic-male-big.png"
-                                            alt></div>
-                                    <div class="tablePopup-block">
-                                        <span>Class:</span> <span>Sword Muse</span>
-                                    </div>
-                                    <div class="tablePopup-block">
-                                        <span>Clan:</span> <span>AmigosDeMessi</span>
-                                    </div>
-                                    <div class="tablePopup-block">
-                                        <span>Level:</span> <span>80</span>
-                                    </div>
-                                    <div class="tablePopup-block">
-                                        <span>Created time:</span> <span>09/07/2024</span>
-                                    </div>
-                                </div>
-                            </a></div>
-                        <div class="tableBlock-conten_lvl"><span class="color-purple">80</span></div>
-                        <div class="tableBlock-conten_scr">1234</div>
-                    </div>
-                    <div class="tableBlock-content">
-                        <div class="tableBlock-conten_number">6</div>
-                        <div class="tableBlock-conten_name"><img src="assets/images/dwarf-male.png" alt>
-                            <a "https://l2esports.pro/href">Zirss
-                                <div class="tablePopup">
-                                    <span class="tablePopup-title">Zirss</span>
-                                    <div class="tablePopup-ava"><img src="assets/images/dwarf-male-big.png" alt>
-                                    </div>
-                                    <div class="tablePopup-block">
-                                        <span>Class:</span> <span>Elemental Master</span>
-                                    </div>
-                                    <div class="tablePopup-block">
-                                        <span>Clan:</span> <span>AmigosDeMessi</span>
-                                    </div>
-                                    <div class="tablePopup-block">
-                                        <span>Level:</span> <span>80</span>
-                                    </div>
-                                    <div class="tablePopup-block">
-                                        <span>Created time:</span> <span>09/07/2024</span>
-                                    </div>
-                                </div>
-                            </a></div>
-                        <div class="tableBlock-conten_lvl"><span class="color-purple">80</span></div>
-                        <div class="tableBlock-conten_scr">1213</div>
-                    </div>
-                    <div class="tableBlock-content">
-                        <div class="tableBlock-conten_number">7</div>
-                        <div class="tableBlock-conten_name"><img src="assets/images/dwarf-female.png" alt>
-                            <a "https://l2esports.pro/href">PayeGuazu
-                                <div class="tablePopup">
-                                    <span class="tablePopup-title">PayeGuazu</span>
-                                    <div class="tablePopup-ava"><img src="assets/images/dwarf-female-big.png"
-                                            alt></div>
-                                    <div class="tablePopup-block">
-                                        <span>Class:</span> <span>Titan</span>
-                                    </div>
-                                    <div class="tablePopup-block">
-                                        <span>Clan:</span> <span>AmigosDeMessi</span>
-                                    </div>
-                                    <div class="tablePopup-block">
-                                        <span>Level:</span> <span>80</span>
-                                    </div>
-                                    <div class="tablePopup-block">
-                                        <span>Created time:</span> <span>09/07/2024</span>
-                                    </div>
-                                </div>
-                            </a></div>
-                        <div class="tableBlock-conten_lvl"><span class="color-purple">80</span></div>
-                        <div class="tableBlock-conten_scr">1122</div>
-                    </div>
-                    <div class="tableBlock-content">
-                        <div class="tableBlock-conten_number">8</div>
-                        <div class="tableBlock-conten_name"><img src="assets/images/mystic-male.png" alt>
-                            <a "https://l2esports.pro/href">Blue
-                                <div class="tablePopup">
-                                    <span class="tablePopup-title">Blue</span>
-                                    <div class="tablePopup-ava"><img src="assets/images/mystic-male-big.png"
-                                            alt></div>
-                                    <div class="tablePopup-block">
-                                        <span>Class:</span> <span>Elemental Master</span>
-                                    </div>
-                                    <div class="tablePopup-block">
-                                        <span>Clan:</span> <span>ColorsInk</span>
-                                    </div>
-                                    <div class="tablePopup-block">
-                                        <span>Level:</span> <span>79</span>
-                                    </div>
-                                    <div class="tablePopup-block">
-                                        <span>Created time:</span> <span>09/07/2024</span>
-                                    </div>
-                                </div>
-                            </a></div>
-                        <div class="tableBlock-conten_lvl"><span class="color-purple">79</span></div>
-                        <div class="tableBlock-conten_scr">1112</div>
-                    </div>
-                    <div class="tableBlock-content">
-                        <div class="tableBlock-conten_number">9</div>
-                        <div class="tableBlock-conten_name"><img src="assets/images/dwarf-male.png" alt>
-                            <a "https://l2esports.pro/href">Berlin
-                                <div class="tablePopup">
-                                    <span class="tablePopup-title">Berlin</span>
-                                    <div class="tablePopup-ava"><img src="assets/images/dwarf-male-big.png" alt>
-                                    </div>
-                                    <div class="tablePopup-block">
-                                        <span>Class:</span> <span>Phoenix Knight</span>
-                                    </div>
-                                    <div class="tablePopup-block">
-                                        <span>Clan:</span> <span>AmigosDeMessi</span>
-                                    </div>
-                                    <div class="tablePopup-block">
-                                        <span>Level:</span> <span>80</span>
-                                    </div>
-                                    <div class="tablePopup-block">
-                                        <span>Created time:</span> <span>09/07/2024</span>
-                                    </div>
-                                </div>
-                            </a></div>
-                        <div class="tableBlock-conten_lvl"><span class="color-purple">80</span></div>
-                        <div class="tableBlock-conten_scr">1004</div>
-                    </div>
-                    <div class="tableBlock-content">
-                        <div class="tableBlock-conten_number">10</div>
-                        <div class="tableBlock-conten_name"><img src="assets/images/dwarf-male.png" alt>
-                            <a "https://l2esports.pro/href">Luffy
-                                <div class="tablePopup">
-                                    <span class="tablePopup-title">Luffy</span>
-                                    <div class="tablePopup-ava"><img src="assets/images/dwarf-male-big.png" alt>
-                                    </div>
-                                    <div class="tablePopup-block">
-                                        <span>Class:</span> <span>Mystic Muse</span>
-                                    </div>
-                                    <div class="tablePopup-block">
-                                        <span>Clan:</span> <span>botones</span>
-                                    </div>
-                                    <div class="tablePopup-block">
-                                        <span>Level:</span> <span>80</span>
-                                    </div>
-                                    <div class="tablePopup-block">
-                                        <span>Created time:</span> <span>09/07/2024</span>
-                                    </div>
-                                </div>
-                            </a></div>
-                        <div class="tableBlock-conten_lvl"><span class="color-purple">80</span></div>
-                        <div class="tableBlock-conten_scr">984</div>
-                    </div>
-                </div>
-                <div class="all-button">
-                    <a href="rankings.html" class="button">View All</a>
-                </div>
-            </div>
-            <div class="table tabTable-block" id="pk">
-                <div class="tableBlock">
-                    <div class="tableBlock-title">
-                        <div class="tableBlock-title_player">Player</div>
-                        <div class="tableBlock-title_level">Level</div>
-                        <div class="tableBlock-title_score">PKs</div>
-                    </div>
-                    <div class="tableBlock-content">
-                        <div class="tableBlock-conten_number">1</div>
-                        <div class="tableBlock-conten_name"><img src="assets/images/dwarf-female.png" alt>
-                            <a "https://l2esports.pro/href">TerraWilson
-                                <div class="tablePopup">
-                                    <span class="tablePopup-title">TerraWilson</span>
-                                    <div class="tablePopup-ava"><img src="assets/images/dwarf-female-big.png"
-                                            alt></div>
-                                    <div class="tablePopup-block">
-                                        <span>Class:</span> <span>Storm Screamer</span>
-                                    </div>
-                                    <div class="tablePopup-block">
-                                        <span>Clan:</span> <span>No clan</span>
-                                    </div>
-                                    <div class="tablePopup-block">
-                                        <span>Level:</span> <span>80</span>
-                                    </div>
-                                    <div class="tablePopup-block">
-                                        <span>Created time:</span> <span>09/07/2024</span>
-                                    </div>
-                                </div>
-                            </a></div>
-                        <div class="tableBlock-conten_lvl"><span class="color-purple">80</span></div>
-                        <div class="tableBlock-conten_scr">451</div>
-                    </div>
-                    <div class="tableBlock-content">
-                        <div class="tableBlock-conten_number">2</div>
-                        <div class="tableBlock-conten_name"><img src="assets/images/orc-male.png" alt>
-                            <a "https://l2esports.pro/href">Benjiprice
-                                <div class="tablePopup">
-                                    <span class="tablePopup-title">Benjiprice</span>
-                                    <div class="tablePopup-ava"><img src="assets/images/orc-male-big.png" alt>
-                                    </div>
-                                    <div class="tablePopup-block">
-                                        <span>Class:</span> <span>Soultaker</span>
-                                    </div>
-                                    <div class="tablePopup-block">
-                                        <span>Clan:</span> <span>BROTHERS</span>
-                                    </div>
-                                    <div class="tablePopup-block">
-                                        <span>Level:</span> <span>80</span>
-                                    </div>
-                                    <div class="tablePopup-block">
-                                        <span>Created time:</span> <span>09/07/2024</span>
-                                    </div>
-                                </div>
-                            </a></div>
-                        <div class="tableBlock-conten_lvl"><span class="color-purple">80</span></div>
-                        <div class="tableBlock-conten_scr">272</div>
-                    </div>
-                    <div class="tableBlock-content">
-                        <div class="tableBlock-conten_number">3</div>
-                        <div class="tableBlock-conten_name"><img src="assets/images/dwarf-female.png" alt>
-                            <a "https://l2esports.pro/href">Toxico
-                                <div class="tablePopup">
-                                    <span class="tablePopup-title">Toxico</span>
-                                    <div class="tablePopup-ava"><img src="assets/images/dwarf-female-big.png"
-                                            alt></div>
-                                    <div class="tablePopup-block">
-                                        <span>Class:</span> <span>Grand Khavatari</span>
-                                    </div>
-                                    <div class="tablePopup-block">
-                                        <span>Clan:</span> <span>CrimenOrganizado</span>
-                                    </div>
-                                    <div class="tablePopup-block">
-                                        <span>Level:</span> <span>80</span>
-                                    </div>
-                                    <div class="tablePopup-block">
-                                        <span>Created time:</span> <span>09/07/2024</span>
-                                    </div>
-                                </div>
-                            </a></div>
-                        <div class="tableBlock-conten_lvl"><span class="color-purple">80</span></div>
-                        <div class="tableBlock-conten_scr">195</div>
-                    </div>
-                    <div class="tableBlock-content">
-                        <div class="tableBlock-conten_number">4</div>
-                        <div class="tableBlock-conten_name"><img src="assets/images/dwarf-male.png" alt>
-                            <a "https://l2esports.pro/href">Kewk
-                                <div class="tablePopup">
-                                    <span class="tablePopup-title">Kewk</span>
-                                    <div class="tablePopup-ava"><img src="assets/images/dwarf-male-big.png" alt>
-                                    </div>
-                                    <div class="tablePopup-block">
-                                        <span>Class:</span> <span>Saggitarius</span>
-                                    </div>
-                                    <div class="tablePopup-block">
-                                        <span>Clan:</span> <span>Peligroxoss</span>
-                                    </div>
-                                    <div class="tablePopup-block">
-                                        <span>Level:</span> <span>79</span>
-                                    </div>
-                                    <div class="tablePopup-block">
-                                        <span>Created time:</span> <span>09/07/2024</span>
-                                    </div>
-                                </div>
-                            </a></div>
-                        <div class="tableBlock-conten_lvl"><span class="color-purple">79</span></div>
-                        <div class="tableBlock-conten_scr">174</div>
-                    </div>
-                    <div class="tableBlock-content">
-                        <div class="tableBlock-conten_number">5</div>
-                        <div class="tableBlock-conten_name"><img src="assets/images/darkelf-female.png" alt>
-                            <a "https://l2esports.pro/href">Peligroxa
-                                <div class="tablePopup">
-                                    <span class="tablePopup-title">Peligroxa</span>
-                                    <div class="tablePopup-ava"><img src="assets/images/darkelf-female-big.png"
-                                            alt></div>
-                                    <div class="tablePopup-block">
-                                        <span>Class:</span> <span>Spellhowler</span>
-                                    </div>
-                                    <div class="tablePopup-block">
-                                        <span>Clan:</span> <span>Peligroxoss</span>
-                                    </div>
-                                    <div class="tablePopup-block">
-                                        <span>Level:</span> <span>75</span>
-                                    </div>
-                                    <div class="tablePopup-block">
-                                        <span>Created time:</span> <span>09/07/2024</span>
-                                    </div>
-                                </div>
-                            </a></div>
-                        <div class="tableBlock-conten_lvl"><span class="color-purple">75</span></div>
-                        <div class="tableBlock-conten_scr">157</div>
-                    </div>
-                    <div class="tableBlock-content">
-                        <div class="tableBlock-conten_number">6</div>
-                        <div class="tableBlock-conten_name"><img src="assets/images/mystic-male.png" alt>
-                            <a "https://l2esports.pro/href">Purple
-                                <div class="tablePopup">
-                                    <span class="tablePopup-title">Purple</span>
-                                    <div class="tablePopup-ava"><img src="assets/images/mystic-male-big.png"
-                                            alt></div>
-                                    <div class="tablePopup-block">
-                                        <span>Class:</span> <span>Ghost Sentinel</span>
-                                    </div>
-                                    <div class="tablePopup-block">
-                                        <span>Clan:</span> <span>ColorsInk</span>
-                                    </div>
-                                    <div class="tablePopup-block">
-                                        <span>Level:</span> <span>80</span>
-                                    </div>
-                                    <div class="tablePopup-block">
-                                        <span>Created time:</span> <span>09/07/2024</span>
-                                    </div>
-                                </div>
-                            </a></div>
-                        <div class="tableBlock-conten_lvl"><span class="color-purple">80</span></div>
-                        <div class="tableBlock-conten_scr">157</div>
-                    </div>
-                    <div class="tableBlock-content">
-                        <div class="tableBlock-conten_number">7</div>
-                        <div class="tableBlock-conten_name"><img src="assets/images/dwarf-female.png" alt>
-                            <a "https://l2esports.pro/href">PayeGuazu
-                                <div class="tablePopup">
-                                    <span class="tablePopup-title">PayeGuazu</span>
-                                    <div class="tablePopup-ava"><img src="assets/images/dwarf-female-big.png"
-                                            alt></div>
-                                    <div class="tablePopup-block">
-                                        <span>Class:</span> <span>Titan</span>
-                                    </div>
-                                    <div class="tablePopup-block">
-                                        <span>Clan:</span> <span>AmigosDeMessi</span>
-                                    </div>
-                                    <div class="tablePopup-block">
-                                        <span>Level:</span> <span>80</span>
-                                    </div>
-                                    <div class="tablePopup-block">
-                                        <span>Created time:</span> <span>09/07/2024</span>
-                                    </div>
-                                </div>
-                            </a></div>
-                        <div class="tableBlock-conten_lvl"><span class="color-purple">80</span></div>
-                        <div class="tableBlock-conten_scr">154</div>
-                    </div>
-                    <div class="tableBlock-content">
-                        <div class="tableBlock-conten_number">8</div>
-                        <div class="tableBlock-conten_name"><img src="assets/images/dwarf-female.png" alt>
-                            <a "https://l2esports.pro/href">Lyanna
-                                <div class="tablePopup">
-                                    <span class="tablePopup-title">Lyanna</span>
-                                    <div class="tablePopup-ava"><img src="assets/images/dwarf-female-big.png"
-                                            alt></div>
-                                    <div class="tablePopup-block">
-                                        <span>Class:</span> <span>Soultaker</span>
-                                    </div>
-                                    <div class="tablePopup-block">
-                                        <span>Clan:</span> <span>botones</span>
-                                    </div>
-                                    <div class="tablePopup-block">
-                                        <span>Level:</span> <span>80</span>
-                                    </div>
-                                    <div class="tablePopup-block">
-                                        <span>Created time:</span> <span>09/07/2024</span>
-                                    </div>
-                                </div>
-                            </a></div>
-                        <div class="tableBlock-conten_lvl"><span class="color-purple">80</span></div>
-                        <div class="tableBlock-conten_scr">142</div>
-                    </div>
-                    <div class="tableBlock-content">
-                        <div class="tableBlock-conten_number">9</div>
-                        <div class="tableBlock-conten_name"><img src="assets/images/mystic-male.png" alt>
-                            <a "https://l2esports.pro/href">blacksheepp
-                                <div class="tablePopup">
-                                    <span class="tablePopup-title">blacksheepp</span>
-                                    <div class="tablePopup-ava"><img src="assets/images/mystic-male-big.png"
-                                            alt></div>
-                                    <div class="tablePopup-block">
-                                        <span>Class:</span> <span>Sword Muse</span>
-                                    </div>
-                                    <div class="tablePopup-block">
-                                        <span>Clan:</span> <span>AmigosDeMessi</span>
-                                    </div>
-                                    <div class="tablePopup-block">
-                                        <span>Level:</span> <span>80</span>
-                                    </div>
-                                    <div class="tablePopup-block">
-                                        <span>Created time:</span> <span>09/07/2024</span>
-                                    </div>
-                                </div>
-                            </a></div>
-                        <div class="tableBlock-conten_lvl"><span class="color-purple">80</span></div>
-                        <div class="tableBlock-conten_scr">139</div>
-                    </div>
-                    <div class="tableBlock-content">
-                        <div class="tableBlock-conten_number">10</div>
-                        <div class="tableBlock-conten_name"><img src="assets/images/darkelf-female.png" alt>
-                            <a "https://l2esports.pro/href">blupblup
-                                <div class="tablePopup">
-                                    <span class="tablePopup-title">blupblup</span>
-                                    <div class="tablePopup-ava"><img src="assets/images/darkelf-female-big.png"
-                                            alt></div>
-                                    <div class="tablePopup-block">
-                                        <span>Class:</span> <span>Phantom Summoner</span>
-                                    </div>
-                                    <div class="tablePopup-block">
-                                        <span>Clan:</span> <span>Peligroxoss</span>
-                                    </div>
-                                    <div class="tablePopup-block">
-                                        <span>Level:</span> <span>78</span>
-                                    </div>
-                                    <div class="tablePopup-block">
-                                        <span>Created time:</span> <span>09/07/2024</span>
-                                    </div>
-                                </div>
-                            </a></div>
-                        <div class="tableBlock-conten_lvl"><span class="color-purple">78</span></div>
-                        <div class="tableBlock-conten_scr">133</div>
-                    </div>
-                </div>
-                <div class="all-button">
-                    <a href="rankings.html" class="button">View All</a>
-                </div>
-            </div>
-        </div>
+
         <div class="forumHome blockHome">
             <div class="h2-title h2-title-table flex-s-c">
-                <span>Noticias</span> <a href="https://l2esports.pro/news">Ver todo</a>
+                <span>Noticias</span> <a href="{% url 'index'%}">Ver todo</a>
             </div>
             <div class="forumBlock-content">
                 {% for news in recent_news_list %}
@@ -571,7 +39,7 @@
                         <div class="forumBlock-text">
                             <a href="{% url 'news_detail' news.id news.category.id %}" class="forumBlock-text_link">{{ news.title }}</a>
                             <div class="forumBlock-text_info">
-                                <span class="forumBlock-text_info-nick">by <a href="https://l2esports.pro/href" title="Fighter-Pro">Admin</a></span> |
+                                <span class="forumBlock-text_info-nick">by <a href="{% url 'index' %}" title="Fighter-Pro">Admin</a></span> |
                                 <span class="forumBlock-text_info-date">{{ news.fechaSubida }}</span>
                             </div>
                         </div>
@@ -585,21 +53,21 @@
                 YouTube
                 <span>Canal Oficial</span>
             </a>
-            <a href="discord.html" target="_blank" rel="noreferrer" class="socButton socDiscord">
+            <a href="{% url 'discord' %}" target="_blank" rel="noreferrer" class="socButton socDiscord">
                 Discord
                 <span>Comunidad</span>
             </a>
-            <a href="https://facebook.com/L2ESports" target="_blank" rel="noreferrer"
+            <a href="https://www.facebook.com/L2Meta/?ref=embed_page" target="_blank" rel="noreferrer"
                 class="socButton socFacebook">
                 Facebook
                 <span>Página Oficial</span>
             </a>
             <div class="socBlock flex-c-c">
-                <a href="https://l2esports.pro/news" class="socBlock-guides socBlock-button">
+                <a href="{% url 'index'%}" class="socBlock-guides socBlock-button">
                     Guias
                     <span>Centro de Información</span>
                 </a>
-                <a href="discord.html" target="_blank" rel="noreferrer" class="socBlock-forum socBlock-button">
+                <a href="{% url 'discord' %}" target="_blank" rel="noreferrer" class="socBlock-forum socBlock-button">
                     Discord
                     <span>Comunidad</span>
                 </a>
@@ -608,7 +76,7 @@
     </aside>
     <div class="content content-page">
         <div class="h2-title h2-title-content flex-s-c">
-            <span> Noticias </span> <a href="https://l2esports.pro/href">{{ actualNew.title }}</a>
+            <span> Noticias </span> <a href="{% url 'index' %}">{{ actualNew.title }}</a>
         </div>
         {% if actualNew.images.all %}
             <p><img src="{{ actualNew.images.all.0.image.url }}" alt="{{ actualNew.title }}" height="298" width="691"></p>
