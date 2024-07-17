@@ -837,7 +837,7 @@ header {
 }
 
 .onlineBlock {
-    background: url('../img/online-img.png') bottom center no-repeat;
+    background: url('../img/server_on.png') bottom center no-repeat;
     width: 300px;
     height: 250px;
     text-align: center;

@@ -62,7 +62,9 @@
             </div>
             <div class="topPanel-wrapper flex-c">
                 <div class="topPanel-left flex-c">
-                    <a href="{% url 'index' %}" class="logo-mini bright"><img src="{% static 'img/metal2-2.png'%}" alt="Logo"></a>
+                    <a href="{% url 'index' %}" class="logo-mini bright" style="width: 90px;">
+                        <img src="{% static 'img/metal2-2.png'%}" alt="Logo" style="width: 55%;" >
+                    </a>
                     <ul class="nav">
                         <li><a href="{% url 'index' %}">Home</a></li>
                         <li><a href="{% url 'downloads' %}">Downloads</a></li>
@@ -95,7 +97,7 @@
             <div class="spark_4 spark-big"></div>
         </div>
         <div class="logo">
-            <a href="{% url 'index' %}" class="bright"><img src="{% static 'img/logo.png'%}" alt="Logo"></a>
+            <a href="{% url 'index' %}" class="bright"><img src="{% static 'img/banner pequen╠âo l2meta.jpg'%}" alt="Logo"></a>
         </div>
         {% block special_header %}
         {% endblock %}
@@ -127,15 +129,11 @@
         {% endblock %}
 
         <!--always there: -->
-        <a target="_blank" rel="noreferrer" href="https://vgw.hopzone.net/site/vote/105292/1"><img
-            src="{% static 'img/hopzone.gif' %}" alt="Vote our sever on HopZone.Net - top l2 servers"
-            style="border:0; position: fixed; z-index:99999; bottom: 0%; right: 0; width:140px; height: 120px;"></a>
-
-        <a class="vote-link" id="top-l2jbrasil-left" target="_blank" rel="noreferrer"
-            href="https://top.l2jbrasil.com/index.php?a=in&amp;u=L2ESports" target="_blank" rel="noreferrer"
+        <a class="vote-link" id="top-Vote-left" target="_blank" rel="noreferrer"
+            href="https://hotservers.org/servers/vote/290" target="_blank" rel="noreferrer"
             style="position: fixed;bottom: 0;left: 0;z-index: 9999;width: 235px;"><img
-                src="https://top.l2jbrasil.com/button_l.php?u=L2ESports&amp;m=left"
-                alt="Top L2JBrasil  de Servidores de   Lineage2 " border="0" style="max-width:70%" /></a>
+                src="{% static 'img/VoteFile.png' %}"
+                alt="VotarL2Meta" border="0" style="border:0; position: fixed; z-index:99999; bottom: 0%; right: 0; width:140px; height: 120px;" /></a>
     </div>
 
     <!-- Script tags -->
