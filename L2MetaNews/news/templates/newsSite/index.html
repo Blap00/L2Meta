@@ -1,6 +1,7 @@
 <!-- index.html -->
 {% extends "base.html" %}
 {% load static %}
+{% load custom_filters %}
 
 
 {% block special_header %}
@@ -49,7 +50,8 @@
         </div>
         {% for news in news_list %}
         <a class="news-card index-{{ forloop.counter }} light" href="{% url 'news_detail' news.id news.category.id %}">
-            <div class="thumb tag-border-sales" style="background-image:url('{{ news.images.all.0.image.url }}')"></div>
+            <div class="thumb tag-border-sales" 
+            style="background-image:url('{% static "storage" %}{{ news.images.all.0.image.url|split:'media/'|last }}')"></div>
             <div class="content-wrapper">
                 <div class="gameTags">
                     <div class="tag features tag-bg-sales">{{ news.category.name }}</div>
