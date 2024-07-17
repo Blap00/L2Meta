@@ -155,7 +155,7 @@ body {
 
 body {
     width: 100%;
-    background: url('../img/body-bg.jpg') center top no-repeat;
+    background: url('../img/bannerwebl2meta.jpg') center top no-repeat;
     background-color: #140505;
     font-family: open sans, sans-serif;
     font-size: 14px;
@@ -455,7 +455,7 @@ button:hover,
 .nav li ul li:after {
     content: "";
     position: absolute;
-    background: url('static/images/drop-menu-hover.png') no-repeat;
+    background: url('../img/drop-menu-hover.png') no-repeat;
     width: 308px;
     height: 133px;
     left: -46px;
@@ -471,7 +471,7 @@ button:hover,
     height: auto;
     line-height: 1;
     color: #fcedc0 !important;
-    background-image: url('static/images/drop-menu-icon.png');
+    background-image: url('../img/drop-menu-icon.png');
     background-position: left -20px center;
     background-repeat: no-repeat
 }
@@ -510,7 +510,7 @@ button:hover,
 .sub-menu:before {
     content: "";
     position: absolute;
-    background: url('static/images/drop-icon.png') no-repeat;
+    background: url('../img/drop-icon.png') no-repeat;
     width: 12px;
     height: 8px;
     top: 50%;
@@ -529,7 +529,7 @@ button:hover,
 
 .sign-in:after {
     content: "";
-    background: url('static/images/lock-icon.png') no-repeat;
+    background: url('../img/lock-icon.png') no-repeat;
     position: absolute;
     width: 91px;
     height: 87px;
@@ -561,7 +561,7 @@ button:hover,
 }
 
 .blue-light {
-    background: url('static/images/blue-light.png');
+    background: url('../img/blue-light.png');
     width: 300px;
     height: 300px;
     top: 5px;
@@ -572,7 +572,7 @@ button:hover,
 }
 
 .yellow-light {
-    background: url('static/images/yellow-light.png');
+    background: url('../img/yellow-light.png');
     width: 300px;
     height: 300px;
     top: 5px;
@@ -619,7 +619,7 @@ button:hover,
 }
 
 .light-hand {
-    background: url('static/images/light-hand.png');
+    background: url('../img/light-hand.png');
     width: 350px;
     height: 350px;
     position: absolute;
@@ -630,7 +630,7 @@ button:hover,
 }
 
 .rune-hand {
-    background: url('static/images/rune-hand.png');
+    background: url('../img/rune-hand.png');
     width: 350px;
     height: 350px;
     position: absolute;
@@ -673,7 +673,7 @@ button:hover,
 }
 
 .sparks .spark_1 {
-    background: url('static/images/spark_1.png') no-repeat;
+    background: url('../img/spark_1.png') no-repeat;
     width: 764px;
     height: 313px;
     right: 0;
@@ -716,7 +716,7 @@ button:hover,
 }
 
 .sparks .spark_2 {
-    background: url('static/images/spark_2.png') no-repeat;
+    background: url('../img/spark_2.png') no-repeat;
     width: 149px;
     height: 335px;
     right: 230px;
@@ -727,7 +727,7 @@ button:hover,
 }
 
 .sparks .spark_3 {
-    background: url('static/images/spark_3.png') no-repeat;
+    background: url('../img/spark_3.png') no-repeat;
     width: 128px;
     height: 165px;
     right: 280px;
@@ -775,7 +775,7 @@ button:hover,
 }
 
 .sparks .spark-big {
-    background: url('static/images/spark_4.png') no-repeat;
+    background: url('../img/spark_4.png') no-repeat;
     width: 794px;
     height: 176px;
     right: 0;
@@ -837,7 +837,7 @@ header {
 }
 
 .onlineBlock {
-    background: url('static/images/online-img.png') bottom center no-repeat;
+    background: url('../img/server_on.png') bottom center no-repeat;
     width: 300px;
     height: 250px;
     text-align: center;
@@ -880,11 +880,11 @@ header {
 }
 
 .onlineReg-block-player {
-    background: url('static/images/online-sprite.png') top left -3px no-repeat
+    background: url('../img/online-sprite.png') top left -3px no-repeat
 }
 
 .onlineReg-block-clans {
-    background: url('static/images/online-sprite.png') top right -3px no-repeat
+    background: url('../img/online-sprite.png') top right -3px no-repeat
 }
 
 .block-50 {
@@ -913,7 +913,7 @@ header {
 }
 
 .swiper-news_info {
-    background: url('static/images/slider-shadow.png') left bottom no-repeat;
+    background: url('../img/slider-shadow.png') left bottom no-repeat;
     width: 561px;
     height: 245px;
     position: absolute;
@@ -953,7 +953,7 @@ header {
 
 .swiper-news-pagination {
     position: absolute;
-    background: url('static/images/slider-arrow-bg.png') no-repeat;
+    background: url('../img/slider-arrow-bg.png') no-repeat;
     width: 108px;
     height: 40px;
     right: 35px;
@@ -962,7 +962,7 @@ header {
 }
 
 .swiper-news-pagination .swiper-button-prev {
-    background: url('static/images/left.png') no-repeat;
+    background: url('../img/left.png') no-repeat;
     width: 24px;
     height: 28px;
     top: 50%;

@@ -6,7 +6,7 @@ import os
 
 def news_image_upload_path(instance, filename):
     # Construye la ruta de carga basada en el título de la noticia y el nombre del archivo
-    return os.path.join('uploads/news', instance.news.title, filename)
+    return os.path.join(instance.news.title, filename)
 
 class NewsCategory(models.Model):
     id = models.BigAutoField(primary_key=True)
@@ -31,4 +31,3 @@ class NewsImage(models.Model):
 
     def __str__(self):
         return f"Image for {self.news.title}"
-
