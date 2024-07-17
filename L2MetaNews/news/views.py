@@ -25,9 +25,9 @@ def discord(request):
 def login(request):
     return redirect("https://l2meta.cl/")
 
-def news_list_by_category(request, category_id):
+def news_list_by_category(request, news_id, category_id):
     recent_news_list = News.objects.all().order_by('-fechaSubida')[:5]  # Obtenemos las 5 noticias más recientes
 
     category = NewsCategory.objects.get(pk=category_id)
-    news_list = News.objects.filter(category=category)
-    return render(request, 'news/category_list.html', {'category': category, 'news_list': news_list, 'recent_news_list': recent_news_list})
+    news = News.objects.filter(category=news_id)
+    return render(request, 'newsSite/detail.html', {'category': category, 'actualNew': news, 'recent_news_list': recent_news_list})

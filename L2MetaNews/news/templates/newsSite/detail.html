@@ -575,7 +575,7 @@ right: 200px;">
                             <img src="{% if news.images.first %}{{ news.images.first.image.url }}{% else %}{% static 'img/default-image.jpg' %}{% endif %}" alt="{{ news.title }}" height="298" width="691">
                         </div>
                         <div class="forumBlock-text">
-                            <a href="{% url 'news_detail' news.pk %}" class="forumBlock-text_link">{{ news.title }}</a>
+                            <a href="{% url 'news_detail' news.id news.category.id %}" class="forumBlock-text_link">{{ news.title }}</a>
                             <div class="forumBlock-text_info">
                                 <span class="forumBlock-text_info-nick">by <a href="https://l2esports.pro/href" title="Fighter-Pro">Admin</a></span> |
                                 <span class="forumBlock-text_info-date">{{ news.fechaSubida }}</span>

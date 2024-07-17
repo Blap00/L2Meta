@@ -8,7 +8,7 @@ urlpatterns = [
     path('Download', views.download, name="downloads"),
     path('Discord', views.discord, name="discord"),
     path('Log-in', views.login, name="login"),
-    path('news/<int:news_id>/', views.news_list_by_category, name='news_detail'),
+    path('news/<int:news_id><int:category_id>/', views.news_list_by_category, name='news_detail'),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
