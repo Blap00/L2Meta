@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse
 from .models import NewsCategory,News
 
@@ -28,6 +28,7 @@ def login(request):
 def news_list_by_category(request, news_id, category_id):
     recent_news_list = News.objects.all().order_by('-fechaSubida')[:5]  # Obtenemos las 5 noticias más recientes
 
-    category = NewsCategory.objects.get(pk=category_id)
-    news = News.objects.filter(category=news_id)
-    return render(request, 'newsSite/detail.html', {'category': category, 'actualNew': news, 'recent_news_list': recent_news_list})
+    category = get_object_or_404(NewsCategory, pk=category_id)
+    actualNew = get_object_or_404(News, pk=news_id)
+    
+    return render(request, 'newsSite/detail.html', {'category': category, 'actualNew': actualNew, 'recent_news_list': recent_news_list})

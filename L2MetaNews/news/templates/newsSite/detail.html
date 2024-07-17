@@ -614,14 +614,14 @@ right: 200px;">
     </aside>
     <div class="content content-page">
         <div class="h2-title h2-title-content flex-s-c">
-            <span> Noticias </span> <a href="https://l2esports.pro/href">{{ news.title }}</a>
+            <span> Noticias </span> <a href="https://l2esports.pro/href">{{ actualNew.title }}</a>
         </div>
-        {% if news.images.all %}
-            <p><img src="{{ news.images.all.0.image.url }}" alt="{{ news.title }}" height="298" width="691"></p>
+        {% if actualNew.images.all %}
+            <p><img src="{{ actualNew.images.all.0.image.url }}" alt="{{ actualNew.title }}" height="298" width="691"></p>
         {% endif %}
-        <p>{{ news.description }}</p>
+        <p>{{ actualNew.description }}</p>
         <h3>Detalles Adicionales:</h3>
-
+    
         <h3>Algunas de las Zonas Stronghold que se activarán:</h3>
         <div data-oembed-url="https://youtu.be/uOSaoovPt7s?si=ACzbJEq5R1jRLlic">
             <div>
@@ -634,12 +634,14 @@ right: 200px;">
             </div>
         </div>
         <!-- Mostrar las imágenes restantes -->
-        {% for image in news.images.all|slice:'1:' %}
-        <h3><br><br>
-            <p><img src="{{ image.image.url }}" alt height="298" width="691"></p>
-        </h3>
+        {% for image in actualNew.images.all|slice:'1:' %}
+            <h3><br><br>
+                <p><img src="{{ image.image.url }}" alt height="298" width="691"></p>
+            </h3>
         {% endfor %}
-        <div class="page-date"><span>{{ news.fechaSubida.day }}</span>/{{ news.fechaSubida|date:"m/Y" }}</div>
+        <div class="page-date"><span>{{ actualNew.fechaSubida.day }}</span>/{{ actualNew.fechaSubida|date:"m/Y" }}</div>
+    </div>
+    
 </main>
 
 <div id="fb-root"></div>

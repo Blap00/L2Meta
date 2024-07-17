@@ -53,45 +53,22 @@ right: 200px;">
             <a href="{% url 'index' %}" data-filter="quests">Quests</a>
         </div>
         <div class="news-list">
-            <a class="news-card index-0 light" href="https://l2esports.pro/seasons-interlude-server">
-                <div class="thumb tag-border-sales"
-                    style="background-image:url('/static/storage/uploads/1715987432_2JptMSDOdw.jpg')"></div>
-                <div class="content-wrapper">
-                    <div class="gameTags">
-                        <div class="tag features tag-bg-sales">FEATURES</div>
-                    </div>
-                    <div class="caption">17/05/2024</div>
-                    <p class="description">Server Info - SEASONS x30 Server</p>
-                </div>
-            </a>
-                {% for news in news_list %}
+            
+            {% for news in news_list %}
                 <div class="news-list">
                     <a href="{% url 'news_detail' news.id news.category.id %}">
-                        <div class="thumb" style="background-image:url('{{ news.image.url }}')"></div>
+                        <div class="thumb" style="background-image:url('{{ news.images.all.0.image.url }}')"></div>
                         <div class="content-wrapper">
-                            <div class="gameTags">
-                                <div class="tag">{{ news.category }}</div>
-                            </div>
-                            <p class="titulo">{{ news.title }}</p>
-                            <div class="caption">{{ news.date_published }}</div>
-
+                        <div class="gameTags">
+                            <div class="tag">{{ news.category }}</div>
                         </div>
-                    </a>
-                </div>
-                {% endfor %}
+                        <p class="titulo">{{ news.title }}</p>
+                        <div class="caption">{{ news.date_published }}</div>
 
-            <a class="news-card index-17 light" href="partyfarm.html">
-                <div class="thumb tag-border-sales"
-                    style="background-image:url('/static/storage/uploads/1682444782_fuvzMhXRPZ.jpg')"></div>
-                <div class="content-wrapper">
-                    <div class="gameTags">
-                        <div class="tag features tag-bg-sales">FEATURES</div>
                     </div>
-                    <div class="caption">17/05/2024</div>
-                    <p class="description">Party Farm - User Guide</p>
-                </div>
-            </a>
-        </div>
+                </a>
+            </div>
+        {% endfor %}
     </div>
 </main>
 <div id="fb-root"></div>
