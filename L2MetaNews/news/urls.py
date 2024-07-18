@@ -9,6 +9,9 @@ urlpatterns = [
     path('Discord', views.discord, name="discord"),
     path('Registrarse', views.login, name="login"),
     path('news/<int:news_id><int:category_id>/', views.news_list_by_category, name='news_detail'),
+
+    #Donaciones solicitud 17-07
+    path('Donaciones', views.donaciones, name="donaciones"),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
