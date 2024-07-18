@@ -1001,16 +1001,13 @@ header {
 }
 
 .download {
-    position: absolute;
-    right: -54px;
-    bottom: -80px
+   
 }
 
 .download-button {
     background: url('../img/download.png') no-repeat;
     width: 447px;
     height: 333px;
-    display: block;
     font-family: philosopher, sans-serif;
     color: #fff;
     font-size: 18px;
@@ -3601,9 +3598,7 @@ iframe[src*=facebook] {
         height: 200 !important
     }
 
-    .download-button {
-        margin: 0 auto
-    }
+  
 
     .topHomeBlocks {
         justify-content: center
@@ -4638,3 +4633,4 @@ button.swiper-pagination-bullet {
 .rates-table tr:last-child {
     border-bottom: none;
 }
+
