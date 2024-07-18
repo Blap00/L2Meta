@@ -3868,7 +3868,8 @@ iframe[src*=facebook] {
 @media(max-width:1000px) {
     body {
         width: 100%;
-        background: url('../img/body-bg-mobile.jpg@v=20240210') center top no-repeat
+        background: url('../img/banner l2meta 3.jpg') center top no-repeat;
+        background-size: 150%
     }
 
     .vote-link img {
