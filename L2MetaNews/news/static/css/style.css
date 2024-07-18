@@ -4668,6 +4668,7 @@ button.swiper-pagination-bullet {
     background-image: url(../img/2000\ l2meta\ coin.png);
     background-size: contain;
     background-repeat: no-repeat;
+    box-shadow: none;
 
 }
 
@@ -4675,10 +4676,12 @@ button.swiper-pagination-bullet {
 background-image: url(../img/5000\ l2meta\ coin.png);
     background-size: contain;
     background-repeat: no-repeat;
+    box-shadow: none;
 }
 
 .col-4.news-card.index-1.light.diezmil {
 background-image: url(../img/10000\ l2meta\ coin.png);
     background-size: contain;
     background-repeat: no-repeat;
+    box-shadow: none;
 }
