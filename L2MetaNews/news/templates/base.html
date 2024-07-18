@@ -20,7 +20,7 @@
     <title>L2 Interlude ESports x10 - Lineage 2 Interlude - Lineage II - Lineage 2 Interlude - L2 Interlude x10 -
         Autofarm - L2ESports</title>
 
-    <link rel="shortcut icon" type="image/jpg" href="{% static 'img/favico.png' %}" />
+    <link rel="shortcut icon" type="image/jpg" href="{% static 'img/favicon.ico' %}" />
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&display=swap" rel="stylesheet">
@@ -148,10 +148,10 @@
                         <span>Información</span>
                     </div>
                     <ul class="f-menu">
-                        <li><a href="https://l2esports.pro/href">Sobre el juego</a></li>
-                        <li><a href="https://l2esports.pro/href">Wiki del Juego</a></li>
-                        <li><a href="https://l2esports.pro/href">Terminos de servicios</a></li>
-                        <li><a href="https://l2esports.pro/href">Acuerdos</a></li>
+                        <li><a href="https://www.lineage2.com/en-us/about">Sobre el juego</a></li>
+                        <li><a href="https://lineage-ii.fandom.com/es/wiki/Wiki_Lineage_II">Wiki del Juego</a></li>
+                        <li><a href="https://www.plaync.com/policy/service/game_en">Terminos de servicios</a></li>
+                        <li><a href="https://l2meta.cl">Acuerdos</a></li>
                     </ul>
                 </div>
                 <div class="footerMenu-block">
@@ -159,10 +159,9 @@
                         <span>Como iniciar</span>
                     </div>
                     <ul class="f-menu">
-                        <li><a href="dashboard.html">Registro</a></li>
-                        <li><a href="downloads.html">Descargas</a></li>
-                        <li><a href="dashboard.html">Área Personal</a></li>
-                        <li><a "https://l2esports.pro/href">FAQ</a></li>
+                        <li><a href="{% url 'index' %}">Registro</a></li>
+                        <li><a href="{% url 'downloads' %}">Descargas</a></li>
+                        <li><a href="{% url 'login' %}">Área Personal</a></li>
                     </ul>
                 </div>
                 <div class="footerMenu-block">
@@ -170,9 +169,8 @@
                         <span>Comunidad</span>
                     </div>
                     <ul class="f-menu">
-                        <li><a href="https://l2esports.pro/news">Forum</a></li>
-                        <li><a href="rankings.html">Rankings</a></li>
-                        <li><a "https://l2esports.pro/href">Administración</a></li>
+                        <li><a href="{% url 'discord' %}">Forum</a></li>
+                        <li><a href="https://l2meta.cl">Administración</a></li>
                     </ul>
                 </div>
                 <div class="footerMenu-block">
@@ -181,12 +179,12 @@
                     </div>
                     <div class="e-mail">
                         <p>E-mail de Soporte:</p>
-                        <a href="downloads.html#">info en L2Meta </a>
+                        <a href="https://hesk.l2meta.cl/">Mesa de soporte L2Meta </a>
                     </div>
                     <div class="f-soc-icons">
-                        <a href="downloads.html#" class="twitter"></a>
-                        <a href="https://facebook.com/L2ESports" class="fb"></a>
-                        <a href="https://twitch.tv/L2ESports" class="twitch"></a>
+                        <a href="{% url 'discord' %}" class="discord"></a> <!--Discord-->
+                        <a href="https://www.facebook.com/L2Meta" class="fb"></a> <!--Facebook-->
+                        <a href="https://www.twitch.tv/meta365" class="twitch"></a> <!--Twitch-->
                     </div>
                 </div>
             </div>

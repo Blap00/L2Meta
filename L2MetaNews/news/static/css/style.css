@@ -2184,9 +2184,12 @@ footer {
     opacity: 1
 }
 
-.f-soc-icons .twitter {
-    background: url('../img/soc-icons.png') left top no-repeat;
-    width: 17px
+.f-soc-icons .discord {
+    background: url('../img/discord-icon.png') left top no-repeat;
+    width: 17px; /* Cambia el ancho según sea necesario */
+    height: 17px; /* Cambia el alto según sea necesario */
+    display: inline-block;
+    background-size: contain;
 }
 
 .f-soc-icons .vk {
