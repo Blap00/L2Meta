@@ -4655,20 +4655,20 @@ button.swiper-pagination-bullet {
 
 
     .col-4.news-card.index-1.light.dosmil {
-            background-image: url(../img/2000\ l2meta\ coin.png);
-            background-size: cover;
-            background-repeat: no-repeat;
-        
+        background-image: url(../img/2000\ l2meta\ coin.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    
     }
     
     .col-4.news-card.index-1.light.cincomil {
-        background-image: url(../img/5000\ l2meta\ coin.png);
-            background-size: cover;
-            background-repeat: no-repeat;
+    background-image: url(../img/5000\ l2meta\ coin.png);
+        background-size: contain;
+        background-repeat: no-repeat;
     }
-
+    
     .col-4.news-card.index-1.light.diezmil {
-        background-image: url(../img/10000\ l2meta\ coin.png);
-            background-size: cover;
-            background-repeat: no-repeat;
+    background-image: url(../img/10000\ l2meta\ coin.png);
+        background-size: contain;
+        background-repeat: no-repeat;
     }
