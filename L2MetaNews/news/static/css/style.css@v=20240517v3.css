@@ -4597,26 +4597,48 @@ button.swiper-pagination-bullet {
 }
 
 
+/* css de rates */
+.rates-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid rgb(135, 135, 135);
+    margin-bottom: 60px;
+}
+
+
+.rates-table td {
+    padding: 10px;
+    color: rgb(235, 224, 199); 
+    background-color: #140505;
+    border-top: 1px solid #868484;
+    border-bottom: 1px solid #858585;
+    
+
+}
+.rates-table tr:last-child {
+    border-bottom: none;
+}
+
+
+
+/* css de botones download */
 .btns-index{
-display: flex;
-position: relative;
-margin-left: 10vw;
-top: 50px;
-
-}
-
-@media (max-width: 1000px) {
-    .btns-index {
-        flex-direction: column;
-        margin-left: 0;
-        top: 0;  
+    display: flex;
+    position: relative;
+    margin-left: 10vw;
+    top: 50px;
+    
     }
-
-    .download.bottom{
-        margin-top: -150px;
+    
+    @media (max-width: 1000px) {
+        .btns-index {
+            flex-direction: column;
+            margin-left: 0;
+            top: 0;  
+        }
+    
+        .download.bottom{
+            margin-top: -150px;
+        }
+    
     }
-
-   
-
-
-}
