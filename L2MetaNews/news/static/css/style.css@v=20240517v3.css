@@ -280,13 +280,14 @@ textarea {
     min-height: 120px
 }
 
-button,
-.button {
+button, .button {
     transition: all .3s ease;
     cursor: pointer;
-    background: url('../img/button.png') no-repeat;
+    background: url(../img/button.png) no-repeat;
+    background-size: cover;
     height: 40px;
-    width: 147px;
+    width: 200px;
+    margin-bottom: 30px;
     border: none;
     color: #fff !important;
     font-family: philosopher, sans-serif;
@@ -296,8 +297,10 @@ button,
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 2px;
-    box-shadow: 0 0 22px 5px rgba(59, 36, 151, .2), 0 10px 15px 4px rgba(0, 0, 0, .3)
+    box-shadow: 0 0 22px 5px rgba(59, 36, 151, .2), 0 10px 15px 4px rgba(0, 0, 0, .3);
 }
+
+
 
 button:hover,
 .button:hover {
@@ -2552,7 +2555,8 @@ aside>div:last-child {
 .d-button.googleButton {
     background: url('../img/google-img.png') center top 20px no-repeat;
     background-color: #453b90;
-    color: #fff
+    color: #fff;
+    margin: 10px
 }
 
 .d-button.dropboxButton {
