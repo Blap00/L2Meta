@@ -20,7 +20,7 @@ def download(request):
     return render(request, 'newsSite/download.html')
 
 def discord(request):
-    return redirect("https://discord.com/invite/jUkzwFNxDd")
+    return redirect("https://discord.gg/Zh4jjj86")
 
 def login(request):
     return redirect("https://l2meta.cl/")
