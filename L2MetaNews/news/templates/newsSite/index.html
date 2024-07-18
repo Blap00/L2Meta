@@ -10,16 +10,16 @@
         <div class="yellow-light"></div>
     </div>
     <div class="onlineBlock">
-        Online
+
     </div>
 
     <div class="download top" style="left: 25vw;">
-        <a href="discord.html" class="download-button bright"
-            style="background: url('/static/img/discord.png') no-repeat;font-size:16px;">Join our
+        <a href="{% url 'discord' %}" class="download-button bright"
+            style="background: url('/static/img/discord.png') no-repeat;font-size:16px;">Unete a
             <span>Discord</span></a>
     </div>
     <div class="download" style="left:56vw">
-        <a href="downloads.html" class="download-button bright">Download <span>Client</span></a>
+        <a href="{% url 'downloads' %}" class="download-button bright">Descargar <span>Cliente</span></a>
     </div>
 </div>
 
@@ -27,38 +27,39 @@
 {% block content %}
 
 
-<link href="{% static 'css/style.css'%}" rel="stylesheet">
+
 <!-- There goes any news that I decide in -->
 <main class="page news">
     <div id="news-list" class="bottom-wrapper">
         <div class="h2-title h2-title-content flex-s-c">
-            <h1>Lineage 2 Interlude - L2 Interlude x10 - Autofarm - L2ESports</h1>
+            <h1>Lineage 2 Meta - L2 Meta News - Meta</h1>
         </div>
         <div class="toolbar">
             <a href="{% url 'index' %}" data-filter="all" class="active">Todo</a>
             <span class="separator"></span>
-            <a href="{% url 'index' %}" data-filter="news">News</a>
+            <a href="{% url 'index' %}" data-filter="News">News</a>
             <span class="separator"></span>
-            <a href="{% url 'index' %}" data-filter="changelog">Changelog</a>
+            <a href="{% url 'index' %}" data-filter="Features">Features</a>
             <span class="separator"></span>
-            <a href="{% url 'index' %}" data-filter="features">Features</a>
+            <a href="{% url 'index' %}" data-filter="Bosses">Bosses</a>
             <span class="separator"></span>
-            <a href="{% url 'index' %}" data-filter="bosses">Bosses</a>
-            <span class="separator"></span>
-            <a href="{% url 'index' %}" data-filter="quests">Quests</a>
+            <a href="{% url 'index' %}" data-filter="Quests">Quests</a>
         </div>
-        {% for news in news_list %}
-        <a class="news-card index-{{ forloop.counter }} light" href="{% url 'news_detail' news.id news.category.id %}">
-            <div class="thumb tag-border-sales" style="background-image:url('{{ news.images.all.0.image.url }}')"></div>
-            <div class="content-wrapper">
-                <div class="gameTags">
-                    <div class="tag features tag-bg-sales">{{ news.category.name }}</div>
+        <div class="row">
+            {% for news in news_list %}
+            <a class="col-4 news-card index-{{ forloop.counter }} light {{news.category.name}}" href="{% url 'news_detail' news.id news.category.id %}">
+                <div class="thumb tag-border-sales" style="background-image:url('{{ news.images.all.0.image.url }}')"></div>
+                <div class="content-wrapper">
+                    <div class="gameTags">
+                        <div class="tag features tag-bg-sales">{{ news.category.name }}</div>
+                    </div>
+                    <div class="caption">{{ news.fechaSubida|date:"d/m/Y" }}</div>
+                    <p class="description">{{ news.title }}</p>
                 </div>
-                <div class="caption">{{ news.fechaSubida|date:"d/m/Y" }}</div>
-                <p class="description">{{ news.title }}</p>
-            </div>
-        </a>
-        {% endfor %}
+            </a>
+            {% endfor %}
+        </div>
+
 
     </div>
 
