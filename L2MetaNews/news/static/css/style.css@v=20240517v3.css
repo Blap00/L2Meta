@@ -998,9 +998,7 @@ header {
 }
 
 .download {
-    position: absolute;
-    right: -54px;
-    bottom: -80px
+  
 }
 
 .download-button {
@@ -3592,9 +3590,7 @@ iframe[src*=facebook] {
         height: 200 !important
     }
 
-    .download-button {
-        margin: 0 auto
-    }
+   
 
     .topHomeBlocks {
         justify-content: center
@@ -3774,8 +3770,6 @@ iframe[src*=facebook] {
 
     .download-button {
         position: relative;
-        left: 50%;
-        margin-left: -223px
     }
 
     .mainHomeBlock>div {
@@ -3864,7 +3858,8 @@ iframe[src*=facebook] {
 @media(max-width:1000px) {
     body {
         width: 100%;
-        background: url('../img/body-bg-mobile.jpg@v=20240210') center top no-repeat
+        background: url('../img/banner l2meta 3.jpg') center top no-repeat;
+        background-size: 150%
     }
 
     .vote-link img {
@@ -4599,4 +4594,29 @@ button.swiper-pagination-bullet {
     z-index: 0;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden
+}
+
+
+.btns-index{
+display: flex;
+position: relative;
+margin-left: 10vw;
+top: 50px;
+
+}
+
+@media (max-width: 1000px) {
+    .btns-index {
+        flex-direction: column;
+        margin-left: 0;
+        top: 0;  
+    }
+
+    .download.bottom{
+        margin-top: -150px;
+    }
+
+   
+
+
 }
