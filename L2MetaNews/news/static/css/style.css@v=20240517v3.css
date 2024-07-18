@@ -155,8 +155,8 @@ body {
 
 body {
     width: 100%;
-    background: url('../img/bannerwebl2meta.jpg') center top no-repeat;
-    background-color: #140505;
+    background: url('../img/banner l2meta 3.jpg') center top no-repeat;
+    background-color: #140505!important;
     font-family: open sans, sans-serif;
     font-size: 14px;
     color: #696868;
@@ -2181,9 +2181,12 @@ footer {
     opacity: 1
 }
 
-.f-soc-icons .twitter {
-    background: url('../img/soc-icons.png') left top no-repeat;
-    width: 17px
+.f-soc-icons .discord {
+    background: url('../img/discord-icon.png') left top no-repeat;
+    width: 17px; /* Cambia el ancho según sea necesario */
+    height: 17px; /* Cambia el alto según sea necesario */
+    display: inline-block;
+    background-size: contain;
 }
 
 .f-soc-icons .vk {

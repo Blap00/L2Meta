@@ -1,0 +1,114 @@
+<!-- index.html -->
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block special_header %}
+<div class="online flex-c-c">
+    <div class="light-animation">
+        <div class="blue-light"></div>
+        <div class="yellow-light"></div>
+    </div>
+    <div class="onlineBlock">
+
+    </div>
+
+    <div class="download top" style="left: 25vw;">
+        <a href="{% url 'discord' %}" class="download-button bright"
+            style="background: url('/static/img/discord.png') no-repeat;font-size:16px;">Unete a
+            <span>Discord</span></a>
+    </div>
+    <div class="download" style="left:56vw">
+        <a href="{% url 'downloads' %}" class="download-button bright">Descargar <span>Cliente</span></a>
+    </div>
+</div>
+
+{% endblock %}
+{% block content %}
+
+
+
+<!-- There goes Donations informations -->
+<main class="page news content-page" style="width: 70%;     left: 18%!important; margin-left: 0%; margin-right: 0%;">
+    <h2>Donaciones y aportes</h2>
+    <p>Por cada aporte usted estará apoyando nuestro proyecto y mantenimiento, agradecemos de corazón a quiens realicen su donación, esto no motiva a seguir trabajando y creciendo con ustedes.</p>
+    <br>
+    <p>Su donación puede hacerse a través de nuestras plataformas digitales disponibles. Siga los siguientes pasos: </p>
+    <ul>
+        <li>1.	Seleccione su aporte.</li>
+        <li>2.	Cuando realice la donación debe enviar un correo electrónico a donaciones@l2meta.cl, adjuntar el comprobante de donación, su nombre, mail de contacto y nombre de su personaje de quien recibirá los L2Meta Coin (L2MetaVoucher)</li>
+        <li>3.	La entrega de los L2Meta voucher se le entregaran antes de 24hrs.</li>
+    </ul>
+    <h3>Seleccione su aporte</h3>
+
+    <div class="row">
+        <a class="col-4 news-card index-1 light" href="https://pagos.virtualpos.cl/mariano-esteban-treupil-arenas/118006655234b2fc99" target="_blank">
+            <div class="content-wrapper">
+                <div class="thumb tag-border-sales" >
+                    <img src="{%static 'img/soc-button-blue.jpg' %}" height="140" alt="">
+                </div>
+                <div class="gameTags">
+                    <div class="tag tag-bg-sales">
+                        <span>Donación de $2000 a L2MetaCoin</span>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a class="col-4 news-card index-1 light" href="https://pagos.virtualpos.cl/mariano-esteban-treupil-arenas/1180066552528b74d0" target="_blank">
+            <div class="content-wrapper">
+                <div class="thumb tag-border-sales" >
+                    <img src="{%static 'img/soc-button-purple.jpg' %}" height="140" alt="">
+                </div>
+                <div class="gameTags">
+                    <div class="tag tag-bg-sales">
+                        <span>Donación de $5000 a L2MetaCoin</span>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a class="col-4 news-card index-1 light" href="https://pagos.virtualpos.cl/mariano-esteban-treupil-arenas/118006655259898f0f" target="_blank">
+            <div class="content-wrapper">
+                <div class="thumb tag-border-sales" >
+                    <img src="{%static 'img/soc-button-red.jpg' %}" height="140" alt="">
+                </div>
+                <div class="gameTags">
+                    <div class="tag tag-bg-sales">
+                        <span>Donación de $10000 a L2MetaCoin</span>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+    </div>
+</main>
+<div id="fb-root"></div>
+
+<div id="fb-customer-chat" class="fb-customerchat">
+</div>
+<script>
+    var chatbox = document.getElementById('fb-customer-chat');
+    chatbox.setAttribute("page_id", "100841992850797");
+    chatbox.setAttribute("attribution", "biz_inbox");
+</script>
+
+<script>
+    window.fbAsyncInit = function () {
+        FB.init({
+            xfbml: true,
+            version: 'v18.0'
+        });
+    };
+
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/es_LA/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+
+
+{% endblock %}
