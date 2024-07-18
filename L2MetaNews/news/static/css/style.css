@@ -2176,8 +2176,12 @@ footer {
 .f-soc-icons a {
     display: block;
     height: 16px;
-    opacity: .3;
+    opacity: .7;
     margin-right: 16px
+}
+
+.opaticy-social{
+    opacity: .8;
 }
 
 .f-soc-icons a:hover {
@@ -2191,6 +2195,8 @@ footer {
     display: inline-block;
     background-size: contain;
 }
+
+
 
 .f-soc-icons .vk {
     background: url('../img/soc-icons.png') left -33px top no-repeat;
