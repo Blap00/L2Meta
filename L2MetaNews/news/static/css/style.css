@@ -4664,14 +4664,14 @@ button.swiper-pagination-bullet {
 }
 
 
-.dosmil{
+.col-4.news-card.index-1.light.dosmil {
     background: url(../img/2000\ l2meta\ coin.png) center top no-repeat;
 }
 
-.cincomil{
+.col-4.news-card.index-1.light.cincomil {
     background: url(../img/5000\ l2meta\ coin.png) center top no-repeat;
 }
 
-.diezmil{
+.col-4.news-card.index-1.light.diezmil {
     background: url(../img/10000\ l2meta\ coin.png) center top no-repeat;
 }
