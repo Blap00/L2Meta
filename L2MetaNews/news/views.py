@@ -35,3 +35,6 @@ def news_list_by_category(request, news_id, category_id):
 
 def donaciones(request):
     return render(request, 'newsSite/donaciones.html')
+
+def rates(request):
+    return render(request, 'newsSite/rates.html')

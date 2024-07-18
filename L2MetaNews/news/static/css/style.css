@@ -4600,3 +4600,32 @@ button.swiper-pagination-bullet {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden
 }
+
+
+
+
+/* css de rates */
+.rates-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid rgb(135, 135, 135);
+    margin-bottom: 60px;
+}
+
+
+
+
+
+.rates-table td {
+    padding: 10px;
+    color: rgb(235, 224, 199); 
+    background-color: #140505;
+    border-top: 1px solid #868484;
+    border-bottom: 1px solid #858585;
+    
+
+}
+
+.rates-table tr:last-child {
+    border-bottom: none;
+}

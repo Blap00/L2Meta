@@ -1,0 +1,91 @@
+<!-- templates/newsSite/rates.html -->
+{% extends "base.html" %}
+{% load static %}
+
+{% block special_header %}
+<div class="online flex-c-c">
+    <div class="light-animation">
+        <div class="blue-light"></div>
+        <div class="yellow-light"></div>
+    </div>
+    <div class="onlineBlock"></div>
+
+    <div class="download top" style="left: 25vw;">
+        <a href="{% url 'discord' %}" class="download-button bright"
+            style="background: url('/static/img/discord.png') no-repeat;font-size:16px;">Únete a
+            <span>Discord</span></a>
+    </div>
+    <div class="download" style="left:56vw">
+        <a href="{% url 'downloads' %}" class="download-button bright">Descargar <span>Cliente</span></a>
+    </div>
+</div>
+{% endblock %}
+{% block content %}
+<main class="page news content-page" style="width: 70%; left: 18%!important; margin-left: 0%; margin-right: 0%;">
+    <h2>Información General</h2>
+    <table class="rates-table">
+        <tr><td>La hora del server, site - GMT -4 Santiago Chile</td></tr>
+        <tr><td>Duración de los Buffs, Dances e Songs - Retail</td></tr>
+        <tr><td>Max Buffs Slots - Retail</td></tr>
+        <tr><td>Maximum Slots Dances and Songs - Retail</td></tr>
+        <tr><td>DualBox 4 - IP</td></tr>
+        <tr><td>Chance Minimum Debuffs - Retail</td></tr>
+        <tr><td>Chance Maximum Debuffs - Retail</td></tr>
+        <tr><td>Olympiads Max Enchant  - Retail</td></tr>
+        <tr><td>Anti-Bot Active Anticheat</td></tr>
+        <tr><td>Geodata and Pathnodes - Sí</td></tr>
+        <tr><td>Sub-Class Quest - Sí</td></tr>
+        <tr><td>Sub-Class Maximum Level - Retail</td></tr>
+        <tr><td>Master Class - Gratis hasta el segundo cambio</td></tr>
+        <tr><td>Venta de buff support shop x player (cada soporte crear su pet de venta)</td></tr>
+        <tr><td>Offline mode Shop - Sí</td></tr>
+        <tr><td>Auto Learn Skills - No</td></tr>
+        <tr><td>Auto Learn Loot - Sí</td></tr>
+        <tr><td>Auto Loot Raid & Grand Boss - No</td></tr>
+        <tr><td>Vitality System - Sí</td></tr>
+        <tr><td>Wedding System - Sí</td></tr>
+    </table>
+
+    <h3>Rates</h3>
+    <table class="rates-table">
+        <tr><td>Experience (EXP) - 3x</td></tr>
+        <tr><td>Experience Party (EXP) - 2x</td></tr>
+        <tr><td>SP Party (SP) - 2x</td></tr>
+        <tr><td>Skill Points (SP) - 2x</td></tr>
+        <tr><td>Adena - x5</td></tr>
+        <tr><td>Drop Items - 1x Chance x4</td></tr>
+        <tr><td>Spoil x5</td></tr>
+        <tr><td>Drop Items Raid Boss - 1x Chance x2</td></tr>
+        <tr><td>Quest Experience (EXP) - 1x</td></tr>
+        <tr><td>Quest Skill Points (SP) - 1x</td></tr>
+        <tr><td>Quest Adena - 2x</td></tr>
+        <tr><td>Quest Items Drop - 1x</td></tr>
+        <tr><td>Spoil - 1x Chance x4</td></tr>
+        <tr><td>Weight Limit - 3x</td></tr>
+        <tr><td>Manor - 1x</td></tr>
+        <tr><td>Extract Fish - 1x Chance 1x</td></tr>
+    </table>
+
+    <h3>Enchants</h3>
+    <table class="rates-table">
+        <tr><td>Safe Enchant - 4</td></tr>
+        <tr><td>Max Enchant - Retail</td></tr>
+        <tr><td>Normal Scroll chance - Retail</td></tr>
+        <tr><td>Blessed Scroll chance - Retail</td></tr>
+        <tr><td>Ancient Scroll chance - Retail</td></tr>
+        <tr><td>Divine Scroll chance - Retail</td></tr>
+        <tr><td>Elemental Stone chance - Retail</td></tr>
+        <tr><td>Elemental Crystal chance - Retail</td></tr>
+    </table>
+
+    <h3>Modificaciones & Eventos</h3>
+    <table class="rates-table">
+        <tr><td>Todos los jugadores iniciarán con dos ítems de regalo, por inauguración del server se darán de forma limitada Item Common y Rune's. Terminada la inauguración del server todos iniciaran solo ítems No Grade Common.</td></tr>
+        <tr><td>NPCs - El armas, armaduras y accesorios son Retail para lograr una experiencia única en un ambiente divertido y competitivo.</td></tr>
+        <tr><td>Raid y Grand Boss: Todo Raidboss y Grandboss son Retail para lograr una experiencia única en un ambiente divertido y competitivo.</td></tr>
+        <tr><td>Npcs de L2Meta(GK Hermana) Teleport base, (Pituca) vestimenta por aportes voluntarios, (La Osa) Cambio de apariencia y entre otros. (Más información en noticias)</td></tr>
+    </table>
+
+    <p>En la Comunidad podrás encontrar información de tu personaje y otras informaciones del servidor L2Meta.</p>
+</main>
+{% endblock %}
