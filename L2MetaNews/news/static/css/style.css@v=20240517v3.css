@@ -1660,7 +1660,7 @@ main {
 }
 
 .socButton.socTwitch:before {
-    background: url('../img/icons8-twitch-48.png') no-repeat;
+    background: url('../img/icons8-twitch-white.png') no-repeat;
     width: 54px;
     height: 38px;
     margin-top: -19px
@@ -3593,7 +3593,8 @@ iframe[src*=facebook] {
 
     .online {
         position: relative;
-        bottom: auto
+        bottom: auto;
+        left: 0;
     }
 
     .download {
@@ -4641,7 +4642,7 @@ button.swiper-pagination-bullet {
 .btns-index{
     display: flex;
     position: relative;
-    margin-left: 10vw;
+    margin-left: 20vw;
     top: 161px;
     
     }

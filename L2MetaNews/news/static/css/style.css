@@ -837,6 +837,9 @@ header {
     left: 50px;
 }
 
+
+
+
 .onlineReg {
     padding-top: 10px
 }
@@ -3598,7 +3601,8 @@ iframe[src*=facebook] {
 
     .online {
         position: relative;
-        bottom: auto
+        bottom: auto;
+        left: 0;
     }
 
     .download {
@@ -4650,7 +4654,7 @@ button.swiper-pagination-bullet {
 .btns-index{
     display: flex;
     position: relative;
-    margin-left: 10vw;
+    margin-left: 20vw;
     top: 161px;
     
     }
