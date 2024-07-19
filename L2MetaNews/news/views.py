@@ -23,7 +23,7 @@ def discord(request):
     return redirect("https://discord.gg/Zh4jjj86")
 
 def login(request):
-    return redirect("https://l2meta.cl/")
+    return redirect("https://cuentas.l2meta.cl/")
 
 def news_list_by_category(request, news_id, category_id):
     recent_news_list = News.objects.all().order_by('-fechaSubida')[:5]  # Obtenemos las 5 noticias más recientes
