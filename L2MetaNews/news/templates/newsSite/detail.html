@@ -11,7 +11,7 @@
     <div class="onlineBlock">
         Online
     </div>
-    
+
     <div class="btns-index">
         <div class="download top" >
             <a href="{% url 'discord' %}" class="download-button bright"
@@ -84,19 +84,7 @@
             <p><img src="{{ actualNew.images.all.0.image.url }}" alt="{{ actualNew.title }}" height="298" width="691"></p>
         {% endif %}
         <p>{{ actualNew.description }}</p>
-        <h3>Detalles Adicionales:</h3>
-    
-        <h3>Algunas de las Zonas Stronghold que se activarán:</h3>
-        <div data-oembed-url="https://youtu.be/uOSaoovPt7s?si=ACzbJEq5R1jRLlic">
-            <div>
-                <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;">
-                    <iframe allow="accelerometer *; clipboard-write *; encrypted-media *; gyroscope *; picture-in-picture *; web-share *;"
-                            allowfullscreen scrolling="no" src="https://if-cdn.com/rKPjziT"
-                            style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;"
-                            tabindex="-1"></iframe>
-                </div>
-            </div>
-        </div>
+
         <!-- Mostrar las imágenes restantes -->
         {% for image in actualNew.images.all|slice:'1:' %}
             <h3><br><br>
@@ -105,7 +93,7 @@
         {% endfor %}
         <div class="page-date"><span>{{ actualNew.fechaSubida.day }}</span>/{{ actualNew.fechaSubida|date:"m/Y" }}</div>
     </div>
-    
+
 </main>
 
 <div id="fb-root"></div>
