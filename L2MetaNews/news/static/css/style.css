@@ -833,8 +833,12 @@ header {
 
 .online {
     position: absolute;
-    bottom: 45px
+    bottom: 45px;
+    left: 50px;
 }
+
+
+
 
 .onlineReg {
     padding-top: 10px
@@ -1648,6 +1652,16 @@ main {
 
 .socButton.socYoutube:before {
     background: url('../img/youtub-icon.png') no-repeat;
+    width: 54px;
+    height: 38px;
+    margin-top: -19px
+}
+.socButton.socTwitch {
+    background: url('../img/soc-button-purple.jpg') no-repeat
+}
+
+.socButton.socTwitch:before {
+    background: url('../img/icons8-twitch-48.png') no-repeat;
     width: 54px;
     height: 38px;
     margin-top: -19px
@@ -3587,7 +3601,8 @@ iframe[src*=facebook] {
 
     .online {
         position: relative;
-        bottom: auto
+        bottom: auto;
+        left: 0;
     }
 
     .download {
@@ -4639,8 +4654,8 @@ button.swiper-pagination-bullet {
 .btns-index{
     display: flex;
     position: relative;
-    margin-left: 10vw;
-    top: 50px;
+    margin-left: 20vw;
+    top: 161px;
     
     }
     
