@@ -3,6 +3,9 @@ from django.urls import path, include, re_path
 from django.http import HttpResponsePermanentRedirect
 
 def redirect_to_www(request):
+    host = request.get_host()
+    if host.startswith('www.'):
+        return None  # No redirigir si ya tiene 'www'
     return HttpResponsePermanentRedirect(f'http://www.l2meta.cl{request.get_full_path()}')
 
 urlpatterns = [
