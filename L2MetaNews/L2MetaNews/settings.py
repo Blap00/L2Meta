@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-^a!k-a7d1k!g(fd!nwy9$*u+#e!g!++*(yg0nto_g%fo#^s^&0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['www.l2meta.cl','l2meta.cl','wpl2metatesting.pythonanywhere.com', 'meta365cl.pythonanywhere.com', 'web.l2meta.cl']
+ALLOWED_HOSTS = ['www.l2meta.cl','l2meta.cl','webapp-2204319.pythonanywhere.com']
 
 
 # Application definition
