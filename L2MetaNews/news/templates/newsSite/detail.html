@@ -60,20 +60,25 @@
         {% if actualNew.images.all %}
             <p><img src="{{ actualNew.images.all.0.image.url }}" alt="{{ actualNew.title }}" height="298" width="691"></p>
         {% endif %}
-        <p>{{ actualNew.description }}</p>
-        <h3>Detalles Adicionales:</h3>
-    
-        <h3>Algunas de las Zonas Stronghold que se activarán:</h3>
-        <div data-oembed-url="https://youtu.be/uOSaoovPt7s?si=ACzbJEq5R1jRLlic">
+        <p>{{ actualNew.description|linebreaksbr }}</p>
+
+        {% if actualNew.detallesAdicionales %}
+            <h3>Detalles Adicionales:</h3>
+            <p>{{ actualNew.detallesAdicionales|linebreaksbr }}</p>
+        {% endif %}
+        {% if actualNew.youtube_embed_url %}
+            <h3>Video Adicional:</h3>
             <div>
                 <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;">
                     <iframe allow="accelerometer *; clipboard-write *; encrypted-media *; gyroscope *; picture-in-picture *; web-share *;"
-                            allowfullscreen scrolling="no" src="https://if-cdn.com/rKPjziT"
+                            allowfullscreen scrolling="no" src="{{ actualNew.youtube_embed_url }}"
                             style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;"
                             tabindex="-1"></iframe>
                 </div>
             </div>
-        </div>
+        {% endif %}
+
+        
         <!-- Mostrar las imágenes restantes -->
         {% for image in actualNew.images.all|slice:'1:' %}
             <h3><br><br>
