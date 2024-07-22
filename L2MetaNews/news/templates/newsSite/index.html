@@ -1,52 +1,31 @@
 <!-- index.html -->
 {% extends "base.html" %}
 {% load static %}
+{% load custom_filters %}
 
 
-{% block special_header %}
-<div class="online flex-c-c">
-    <div class="light-animation">
-        <div class="blue-light"></div>
-        <div class="yellow-light"></div>
-    </div>
-    <div class="onlineBlock">
-
-    </div>
-
-    <div class="btns-index">
-        <div class="download top" >
-            <a href="{% url 'discord' %}" class="download-button bright"
-                style="background: url('/static/img/discord.png') no-repeat;font-size:16px;">Unete a
-                <span>Discord</span></a>
-        </div>
-        <div class="download bottom">
-            <a href="{% url 'downloads' %}" class="download-button bright">Descargar <span>Cliente</span></a>
-        </div>
-    </div>
-    
-</div>
-
-{% endblock %}
 {% block content %}
 
 
-
+<link href="{% static 'css/style.css'%}" rel="stylesheet">
 <!-- There goes any news that I decide in -->
 <main class="page news">
     <div id="news-list" class="bottom-wrapper">
         <div class="h2-title h2-title-content flex-s-c">
-            <h1>Lineage 2 Meta - L2 Meta News - Meta</h1>
+            <h1>L2Meta - Lineage ll</h1>
         </div>
         <div class="toolbar">
             <a href="{% url 'index' %}" data-filter="all" class="active">Todo</a>
             <span class="separator"></span>
-            <a href="{% url 'index' %}" data-filter="News">News</a>
+            <a href="{% url 'index' %}" data-filter="news">News</a>
             <span class="separator"></span>
-            <a href="{% url 'index' %}" data-filter="Features">Features</a>
+            <a href="{% url 'index' %}" data-filter="changelog">Changelog</a>
             <span class="separator"></span>
-            <a href="{% url 'index' %}" data-filter="Bosses">Bosses</a>
+            <a href="{% url 'index' %}" data-filter="features">Features</a>
             <span class="separator"></span>
-            <a href="{% url 'index' %}" data-filter="Quests">Quests</a>
+            <a href="{% url 'index' %}" data-filter="bosses">Bosses</a>
+            <span class="separator"></span>
+            <a href="{% url 'index' %}" data-filter="quests">Quests</a>
         </div>
         <div class="row">
             {% for news in news_list %}
@@ -62,7 +41,6 @@
             </a>
             {% endfor %}
         </div>
-
 
     </div>
 

@@ -35,28 +35,6 @@
 <meta name="facebook-domain-verification" content="97zbl1f1jzqsix46rx8ch1626ucudi" />
 {% endblock %}
 
-{% block special_header %}
-<div class="online flex-c-c">
-    <div class="light-animation">
-        <div class="blue-light"></div>
-        <div class="yellow-light"></div>
-    </div>
-    <div class="onlineBlock">
-    </div>
-
-    <div class="btns-index">
-        <div class="download top" >
-            <a href="{% url 'discord' %}" class="download-button bright"
-                style="background: url('/static/img/discord.png') no-repeat;font-size:16px;">Unete a
-                <span>Discord</span></a>
-        </div>
-        <div class="download bottom">
-            <a href="{% url 'downloads' %}" class="download-button bright">Descargar <span>Cliente</span></a>
-        </div>
-    </div>
-</div>
-
-{% endblock %}
 {% block content %}
 
 <main class="main">
@@ -74,7 +52,7 @@
                     <div class="forumBlock-text">
                         <a href="news/index.html" class="forumBlock-text_link">Exclusive farm zone</a>
                         <div class="forumBlock-text_info">
-                            <span class="forumBlock-text_info-nick">by <a "https://l2esports.pro/href"
+                            <span class="forumBlock-text_info-nick">by <a
                                     title="Fighter-Pro">Admin</a></span> |
                             <span class="forumBlock-text_info-date">17/05/2024 21:20</span>
                         </div>
@@ -83,25 +61,31 @@
             </div>
         </div>
         <div class="socHome">
-            <a href="https://www.youtube.com/channel/UCSx3Ugo-md4BF2M-b65s10g" target="_blank" rel="noreferrer"
+            <a href="https://www.youtube.com/@meta365cl" target="_blank" rel="noreferrer"
                 class="socButton socYoutube">
                 YouTube
                 <span>Canal Oficial</span>
             </a>
-            <a href="discord.html" target="_blank" rel="noreferrer" class="socButton socDiscord">
+
+            <a href="https://www.twitch.tv/meta365" target="_blank" rel="noreferrer"
+                class="socButton socTwitch">
+                Twitch
+                <span>Streaming</span>
+            </a>
+            <a href="{% url 'discord' %}" target="_blank" rel="noreferrer" class="socButton socDiscord">
                 Discord
                 <span>Comunidad</span>
             </a>
-            <a href="https://facebook.com/L2ESports" target="_blank" rel="noreferrer" class="socButton socFacebook">
+            <a href="https://www.facebook.com/L2Meta?_rdc=1&_rdr" target="_blank" rel="noreferrer" class="socButton socFacebook">
                 Facebook
                 <span>Página Oficial</span>
             </a>
             <div class="socBlock flex-c-c">
-                <a href="https://l2esports.pro/news" class="socBlock-guides socBlock-button">
+                <a href="{% url 'index' %}" class="socBlock-guides socBlock-button">
                     Guias
                     <span>Centro de Información</span>
                 </a>
-                <a href="discord.html" target="_blank" rel="noreferrer" class="socBlock-forum socBlock-button">
+                <a href="{% url 'discord' %}" target="_blank" rel="noreferrer" class="socBlock-forum socBlock-button">
                     Discord
                     <span>Comunidad</span>
                 </a>
@@ -114,42 +98,46 @@
         </div>
         <div class="downloadBlock-content">
             <div class="downloadBlock-title">
-                How to install
+                Descargas
             </div>
-            <div class="downloadBlock" style="padding-right:0px;padding-left:0px;">
+            
+            <!--<div class="downloadBlock" style="padding-right:0px;padding-left:0px;">
                 <iframe style="max-width: 100%;width:100%;" width="560" height="315"
-                    src="https://www.youtube.com/embed/hjKRK6afx8k?si=uoSHB6UG9lkKlmZy" title="YouTube video player"
+                    src="" title="YouTube video player"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen></iframe>
-            </div>
+            </div>--> 
             <div class="downloadBlock">
                 <div class="downloadBlock-title">
-                    Full client: Size: <span>2.5Gb</span>
+                    Descargas Drive <span></span>
                 </div>
                 <div class="flex-c-c downloadBlock-buttons">
-                    <a href="https://drive.google.com/file/d/1-rnT6KB6bw0cQ1bs9Ro83oRlAcj6wPZ8/view?usp=sharing"
-                        class="googleButton d-button" target="_blank" rel="noreferrer">Google Drive I</a>
-                    <a href="https://drive.google.com/file/d/1IYKl4vIslz2GrOjgVF-Bl8uwh_aHLZuS/view?usp=sharing"
-                        class="googleButton d-button" target="_blank" rel="noreferrer">Google Drive II</a>
+                    <a href="https://drive.google.com/file/d/18fyHT56y4DGPA3ffWq2tU6ofL1XaR1th/view?usp=sharing"
+                        class="googleButton d-button" target="_blank" rel="noreferrer">Descargar Updater</a>
+                    <a href="https://drive.google.com/file/d/1Xw5gCyvMgTLzF-723csNlikC4msu3DBR/view?usp=sharing"
+                        class="googleButton d-button" target="_blank" rel="noreferrer">Juego Listo</a>
+                    <a href="https://dri ve.google.com/file/d/1huWpvGRhCLEicDsaDJtdT-AkRbe80Kow/view?usp=sharing"
+                        class="googleButton d-button" target="_blank" rel="noreferrer">Patch System (opcional)</a>
                 </div>
             </div>
             <div class="downloadBlock">
                 <div class="downloadBlock-title">
-                    Download Launcher
+                    Descargas Mediafire
                 </div>
                 <div class="downloadBlock-text">
-                    If you already have the client, you can download our Launcher. Remember that you should paste it
-                    inside the main Lineage II folder (NOT inside system)
+                </div>
+
+                <div class="downloadBlock-button">
+                    <a href="https://www.mediafire.com/file/xsu1mw80dapm2yu/L2MetaUpdater_v4.rar/file" target="_blank" rel="noreferrer" class="button">Descargar Updater</a>
                 </div>
                 <div class="downloadBlock-button">
-                    <a href="launcher/L2ESports.exe" target="_blank" rel="noreferrer" class="button">Download
-                        Launcher</a>
+                    <a href="https://www.mediafire.com/file/7d0sc7m4824pc4c/L2Meta07-07-2024.rar/file" target="_blank" rel="noreferrer" class="button">Juego Actualizado</a>
                 </div>
             </div>
 
         </div>
-        <div class="mirror">
+        <!--<div class="mirror">
             <span class="mirror-title">This section contains everything you need to play L2ESports.</span>
             <div class="mirrorBlock">
                 <p>Clean Client 1 [Google Drive]: <span>Download - 2.5 GB</span></p>
@@ -186,7 +174,7 @@
                 <a href="https://www.mediafire.com/file/u8hmj3fo329ohek/Silent_Dark_R2.7z/file" target="_blank"
                     rel="noreferrer" class="button">Ir</a>
             </div>
-        </div>
+        </div>--> 
     </div>
 </main>
 <div id="fb-root"></div>
@@ -225,9 +213,8 @@
         <div class="modalContent">
             <span class="modalTitle">Sign in</span>
             <div class="enterButtons">
-                <a href="https://l2esports.pro/auth/discord" class="discord-button">Connect with Discord</a>
-                <a href="https://l2esports.pro/auth/facebook" class="facebook-button">Connect with Facebook</a>
-                <a href="https://l2esports.pro/auth/google" class="google-button">Connect with Google</a>
+                <a href="{% url 'discord' %}" class="discord-button">Conectar con Discord</a>
+                <a href="https://www.facebook.com/L2Meta?_rdc=1&_rdr" class="facebook-button">Conectar con Facebook</a>
             </div>
         </div>
     </form>

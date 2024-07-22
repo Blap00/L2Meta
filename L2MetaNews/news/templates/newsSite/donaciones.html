@@ -3,29 +3,6 @@
 {% load static %}
 
 
-{% block special_header %}
-<div class="online flex-c-c">
-    <div class="light-animation">
-        <div class="blue-light"></div>
-        <div class="yellow-light"></div>
-    </div>
-    <div class="onlineBlock">
-
-    </div>
-
-    <div class="btns-index">
-        <div class="download top" >
-            <a href="{% url 'discord' %}" class="download-button bright"
-                style="background: url('/static/img/discord.png') no-repeat;font-size:16px;">Unete a
-                <span>Discord</span></a>
-        </div>
-        <div class="download bottom">
-            <a href="{% url 'downloads' %}" class="download-button bright">Descargar <span>Cliente</span></a>
-        </div>
-    </div>
-</div>
-
-{% endblock %}
 {% block content %}
 
 
@@ -44,41 +21,14 @@
     <h3>Seleccione su aporte</h3>
 
     <div class="row">
-        <a class="col-4 news-card index-1 light" href="https://pagos.virtualpos.cl/mariano-esteban-treupil-arenas/118006655234b2fc99" target="_blank">
-            <div class="content-wrapper">
-                <div class="thumb tag-border-sales" >
-                    <img src="{%static 'img/soc-button-blue.jpg' %}" height="140" alt="">
-                </div>
-                <div class="gameTags">
-                    <div class="tag tag-bg-sales">
-                        <span>Donación de $2000 a L2MetaCoin</span>
-                    </div>
-                </div>
-            </div>
+        <a class="col-4 news-card index-1 light dosmil" href="https://pagos.virtualpos.cl/mariano-esteban-treupil-arenas/118006655234b2fc99" target="_blank">
+           
         </a>
-        <a class="col-4 news-card index-1 light" href="https://pagos.virtualpos.cl/mariano-esteban-treupil-arenas/1180066552528b74d0" target="_blank">
-            <div class="content-wrapper">
-                <div class="thumb tag-border-sales" >
-                    <img src="{%static 'img/soc-button-purple.jpg' %}" height="140" alt="">
-                </div>
-                <div class="gameTags">
-                    <div class="tag tag-bg-sales">
-                        <span>Donación de $5000 a L2MetaCoin</span>
-                    </div>
-                </div>
-            </div>
+        <a class="col-4 news-card index-1 light cincomil" href="https://pagos.virtualpos.cl/mariano-esteban-treupil-arenas/1180066552528b74d0" target="_blank">
+            
         </a>
-        <a class="col-4 news-card index-1 light" href="https://pagos.virtualpos.cl/mariano-esteban-treupil-arenas/118006655259898f0f" target="_blank">
-            <div class="content-wrapper">
-                <div class="thumb tag-border-sales" >
-                    <img src="{%static 'img/soc-button-red.jpg' %}" height="140" alt="">
-                </div>
-                <div class="gameTags">
-                    <div class="tag tag-bg-sales">
-                        <span>Donación de $10000 a L2MetaCoin</span>
-                    </div>
-                </div>
-            </div>
+        <a class="col-4 news-card index-1 light diezmil" href="https://pagos.virtualpos.cl/mariano-esteban-treupil-arenas/118006655259898f0f" target="_blank">
+            
         </a>
 
     </div>

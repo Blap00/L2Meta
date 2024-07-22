@@ -283,13 +283,14 @@ textarea {
     min-height: 120px
 }
 
-button,
-.button {
+button, .button {
     transition: all .3s ease;
     cursor: pointer;
-    background: url('../img/button.png') no-repeat;
+    background: url(../img/button.png) no-repeat;
+    background-size: cover;
     height: 40px;
-    width: 147px;
+    width: 200px;
+    margin-bottom: 30px;
     border: none;
     color: #fff !important;
     font-family: philosopher, sans-serif;
@@ -299,7 +300,7 @@ button,
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 2px;
-    box-shadow: 0 0 22px 5px rgba(59, 36, 151, .2), 0 10px 15px 4px rgba(0, 0, 0, .3)
+    box-shadow: 0 0 22px 5px rgba(59, 36, 151, .2), 0 10px 15px 4px rgba(0, 0, 0, .3);
 }
 
 button:hover,
@@ -832,8 +833,12 @@ header {
 
 .online {
     position: absolute;
-    bottom: 45px
+    bottom: 45px;
+    left: 50px;
 }
+
+
+
 
 .onlineReg {
     padding-top: 10px
@@ -1647,6 +1652,16 @@ main {
 
 .socButton.socYoutube:before {
     background: url('../img/youtub-icon.png') no-repeat;
+    width: 54px;
+    height: 38px;
+    margin-top: -19px
+}
+.socButton.socTwitch {
+    background: url('../img/soc-button-purple.jpg') no-repeat
+}
+
+.socButton.socTwitch:before {
+    background: url('../img/icons8-twitch-48.png') no-repeat;
     width: 54px;
     height: 38px;
     margin-top: -19px
@@ -2560,7 +2575,8 @@ aside>div:last-child {
 .d-button.googleButton {
     background: url('../img/google-img.png') center top 20px no-repeat;
     background-color: #453b90;
-    color: #fff
+    color: #fff;
+    margin: 10px
 }
 
 .d-button.dropboxButton {
@@ -3585,7 +3601,8 @@ iframe[src*=facebook] {
 
     .online {
         position: relative;
-        bottom: auto
+        bottom: auto;
+        left: 0;
     }
 
     .download {
@@ -3868,7 +3885,8 @@ iframe[src*=facebook] {
 @media(max-width:1000px) {
     body {
         width: 100%;
-        background: url('../img/body-bg-mobile.jpg@v=20240210') center top no-repeat
+        background: url('../img/banner l2meta 3.jpg') center top no-repeat;
+        background-size: 150%
     }
 
     .vote-link img {
@@ -4617,9 +4635,6 @@ button.swiper-pagination-bullet {
 }
 
 
-
-
-
 .rates-table td {
     padding: 10px;
     color: rgb(235, 224, 199); 
@@ -4629,8 +4644,59 @@ button.swiper-pagination-bullet {
     
 
 }
-
 .rates-table tr:last-child {
     border-bottom: none;
 }
 
+
+
+/* css de botones download */
+.btns-index{
+    display: flex;
+    position: relative;
+    margin-left: 20vw;
+    top: 161px;
+    
+    }
+    
+    @media (max-width: 1000px) {
+        .btns-index {
+            flex-direction: column;
+            margin-left: 0;
+            top: 0;  
+        }
+    
+        .download.bottom{
+            margin-top: -150px;
+        }
+    
+    }
+
+
+    .dona-span{
+        font-size: 1.6em;
+        margin-top: 20px;
+}
+
+
+.col-4.news-card.index-1.light.dosmil {
+    background-image: url(../img/2000\ l2meta\ coin.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    box-shadow: none;
+
+}
+
+.col-4.news-card.index-1.light.cincomil {
+background-image: url(../img/5000\ l2meta\ coin.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    box-shadow: none;
+}
+
+.col-4.news-card.index-1.light.diezmil {
+background-image: url(../img/10000\ l2meta\ coin.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    box-shadow: none;
+}
