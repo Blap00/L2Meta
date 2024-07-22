@@ -122,11 +122,32 @@
             <div class="spark_4 spark-big"></div>
         </div>
         <div class="logo">
-            <!-- <a href="{% url 'index' %}" class="bright"><img src="{% static 'img/banner pequen╠âo l2meta.jpg'%}" alt="Logo"></a> -->
         </div>
-        {% block special_header %}
-        {% endblock %}
+            <!--Escpecial header, it will be as a normal¿?-->
+    <div class="online flex-c-c">
+        <div class="light-animation">
+            <div class="blue-light"></div>
+            <div class="yellow-light"></div>
+        </div>
+        <div class="onlineBlock">
+            
+        </div>
+    
+    
+        <div class="btns-index">
+            <div class="download top" >
+                <a href="{% url 'discord' %}" class="download-button bright"
+                    style="background: url('/static/img/discord.png') no-repeat;font-size:16px;">Unete a
+                    <span>Discord</span></a>
+            </div>
+            <div class="download bottom">
+                <a href="{% url 'downloads' %}" class="download-button bright">Descargar <span>Cliente</span></a>
+            </div>
+        </div>
+        
+    </div>
     </header>
+    
     <div class="container-fluid">
         <!-- Display Messages -->
         {% for message in messages %}

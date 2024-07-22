@@ -2,32 +2,61 @@
 {% load static %}
 
 
-{% block special_header %}
-<div class="online flex-c-c">
-    <div class="light-animation">
-        <div class="blue-light"></div>
-        <div class="yellow-light"></div>
-    </div>
-    <div class="onlineBlock">
-        Online
-    </div>
-
-    <div class="btns-index">
-        <div class="download top" >
-            <a href="{% url 'discord' %}" class="download-button bright"
-                style="background: url('/static/img/discord.png') no-repeat;font-size:16px;">Unete a
-                <span>Discord</span></a>
-        </div>
-        <div class="download bottom">
-            <a href="{% url 'downloads' %}" class="download-button bright">Descargar <span>Cliente</span></a>
-        </div>
-    </div>
-</div>
-{% endblock %}
 {% block content %}
+<style>
+/* Estilos para el lightbox */
+.lightbox-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    transition: transform 0.25s ease;
+    cursor: zoom-in;
+    position: absolute;  /* Cambiado para permitir el desplazamiento absoluto */
+    top: 25%!important;
+    left: 25%!important;
+}
+.lightbox-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 100px;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;  /* Cambiado de auto a hidden para prevenir desplazamiento de la ventana */
+    background-color: rgba(0,0,0,0.8);
+}
+
+
+
+.lightbox-content.zoomed {
+    transform: scale(2);
+    padding-top:5vh;
+}
+
+
+.lightbox-close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.lightbox-close:hover,
+.lightbox-close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+</style>
 <main class="main">
     <aside>
-
         <div class="forumHome blockHome">
             <div class="h2-title h2-title-table flex-s-c">
                 <span>Noticias</span> <a href="{% url 'index'%}">Ver todo</a>
@@ -50,8 +79,7 @@
             </div>
         </div>
         <div class="socHome">
-            <a href="https://www.youtube.com/channel/UCSx3Ugo-md4BF2M-b65s10g" target="_blank" rel="noreferrer"
-                class="socButton socYoutube">
+            <a href="https://www.youtube.com/channel/UCSx3Ugo-md4BF2M-b65s10g" target="_blank" rel="noreferrer" class="socButton socYoutube">
                 YouTube
                 <span>Canal Oficial</span>
             </a>
@@ -59,16 +87,15 @@
                 Discord
                 <span>Comunidad</span>
             </a>
-            <a href="https://www.facebook.com/L2Meta/?ref=embed_page" target="_blank" rel="noreferrer"
-                class="socButton socFacebook">
+            <a href="httpsmepub://www.facebook.com/L2Meta/?ref=embed_page" target="_blank" rel="noreferrer" class="socButton socFacebook">
                 Facebook
                 <span>Página Oficial</span>
             </a>
             <div class="socBlock flex-c-c">
-                <a href="{% url 'index'%}" class="socBlock-guides socBlock-button">
+                <gif class="socBlock-guides socBlock-button">
                     Guias
                     <span>Centro de Información</span>
-                </a>
+                </gif>
                 <a href="{% url 'discord' %}" target="_blank" rel="noreferrer" class="socBlock-forum socBlock-button">
                     Discord
                     <span>Comunidad</span>
@@ -81,16 +108,37 @@
             <span> Noticias </span> <a href="{% url 'index' %}">{{ actualNew.title }}</a>
         </div>
         {% if actualNew.images.all %}
-            <p><img src="{{ actualNew.images.all.0.image.url }}" alt="{{ actualNew.title }}" height="298" width="691"></p>
+            <p><img id="zoom_image" src="{{ actualNew.images.all.0.image.url }}" alt="{{ actualNew.title }}" height="298" width="691" class="expandable-image"></p>
         {% endif %}
-        <p>{{ actualNew.description }}</p>
+        <p>{{ actualNew.description|linebreaksbr }}</p>
+
+        {% if actualNew.detallesAdicionales %}
+            <h3>Detalles Adicionales:</h3>
+            <p>{{ actualNew.detallesAdicionales|linebreaksbr }}</p>
+        {% endif %}
+        {% if actualNew.youtube_embed_url %}
+            <h3>Video Adicional:</h3>
+            <div>
+                <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;">
+                    <iframe allow="accelerometer *; clipboard-write *; encrypted-media *; gyroscope *; picture-in-picture *; web-share *;"
+                            allowfullscreen scrolling="no" src="{{ actualNew.youtube_embed_url }}"
+                            style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;"
+                            tabindex="-1"></iframe>
+                </div>
+            </div>
+        {% endif %}
 
         <!-- Mostrar las imágenes restantes -->
         {% for image in actualNew.images.all|slice:'1:' %}
             <h3><br><br>
-                <p><img src="{{ image.image.url }}" alt height="298" width="691"></p>
+                <p><img src="{{ image.image.url }}" alt height="298" width="691" class="expandable-image"></p>
             </h3>
         {% endfor %}
+        <!-- Lightbox Modal -->
+        <div id="lightbox-modal" class="lightbox-modal">
+            <span class="lightbox-close">&times;</span>
+            <img class="lightbox-content" id="lightbox-image">
+        </div>
         <div class="page-date"><span>{{ actualNew.fechaSubida.day }}</span>/{{ actualNew.fechaSubida|date:"m/Y" }}</div>
     </div>
 
@@ -105,7 +153,75 @@
     chatbox.setAttribute("page_id", "100841992850797");
     chatbox.setAttribute("attribution", "biz_inbox");
 </script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Seleccionar todos los elementos de imagen expandible
+    var images = document.querySelectorAll('.expandable-image');
+    var modal = document.getElementById('lightbox-modal');
+    var modalImg = document.getElementById('lightbox-image');
+    var closeBtn = document.getElementsByClassName('lightbox-close')[0];
 
+    images.forEach(function(image) {
+        image.onclick = function() {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            modalImg.style.top = '0px';
+            modalImg.style.left = '0px';
+            modalImg.style.position = 'absolute'; // Asegura que la imagen se pueda mover
+        }
+    });
+
+    closeBtn.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    modal.onclick = function(event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    // Agregar funcionalidad de zoom
+    modalImg.onclick = function() {
+        if (this.classList.contains('zoomed')) {
+            this.classList.remove('zoomed');
+            this.style.removeProperty('left');
+            this.style.removeProperty('top');
+        } else {
+            this.classList.add('zoomed');
+        }
+    }
+
+    // Agregar funcionalidad de arrastre
+    var isDragging = true;
+    var startX, startY, initialX, initialY;
+
+    modalImg.addEventListener('mousedown', function(e) {
+        if (this.classList.contains('zoomed')) {
+            isDragging = true;
+            startX = e.clientX;
+            startY = e.clientY;
+            initialX = parseFloat(this.style.left) || 0;
+            initialY = parseFloat(this.style.top) || 0;
+            e.preventDefault();
+        }
+    });
+
+    document.addEventListener('mousemove', function(e) {
+        if (isDragging) {
+            var deltaX = e.clientX - startX;
+            var deltaY = e.clientY - startY;
+            modalImg.style.left = initialX + deltaX + 'px';
+            modalImg.style.top = initialY + deltaY + 'px';
+        }
+    });
+
+    document.addEventListener('mouseup', function() {
+        isDragging = false;
+    });
+});
+
+</script>
 <script>
     window.fbAsyncInit = function () {
         FB.init({
@@ -122,5 +238,4 @@
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
 </script>
-</div>
 {% endblock %}
