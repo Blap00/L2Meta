@@ -21,8 +21,8 @@ class News(models.Model):
     id = models.BigAutoField(primary_key=True)
     title = models.CharField(max_length=100)
     description = models.TextField()
-    detallesAdicionales = models.TextField(default="")
-    youtube_adicional = models.CharField(max_length=255, default="")
+    detallesAdicionales = models.TextField(null=True,blank=True)
+    youtube_adicional = models.CharField(max_length=255, null=True, blank=True)
     fechaSubida = models.DateField(default=timezone.now().date())
     category = models.ForeignKey(NewsCategory, on_delete=models.CASCADE, default=1)
 
